@@ -106,7 +106,6 @@ $(document).ready(function(){
       speed: 10000,
       infinite: true,
       arrows: false,
-      rows: 2,
       responsive: [
         {
           breakpoint: 1023,
