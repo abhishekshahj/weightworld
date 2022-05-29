@@ -1,0 +1,261 @@
+// Top Green Belt Starts
+
+.topBelt {
+    background: #99c355;
+    padding: 14px 0;
+
+    .topBeltInnerWrapper{
+        margin: 0 auto;
+        font-weight: 500;
+        font-size: 15px;
+        color: #fff;
+        text-align: center;
+
+        a{
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+}
+
+// Top Green Belt Ends
+
+// Banner Slider Starts
+
+ .bSlider {
+    .bSliderImageWrapper {
+        background-size: cover !important;
+        position: relative;
+        min-width: 100vw;
+        min-height: calc(100vh - 51px);
+        float: left;
+    } 
+    // .bSliderContentWrapper{
+    //     float: right;
+    //     min-width: 50vw;
+    //     min-height: calc(100vh - 51px);
+    //     background-color: #dafdff;
+    //     display: flex;
+    //     align-items: center;
+    // }   
+    ul {
+        list-style-type: none;
+    }
+    ul.slick-dots {
+        position: absolute;
+        bottom: 13px;
+        right: 79px;
+    }
+    ul.slick-dots li button {
+        margin-left: 10px;
+        width: 42px;
+        height: 6px;
+        font-size: 0;
+        border: 0;
+        border-radius: 15px;
+        background: #fff;
+    }
+    ul.slick-dots li {
+        float: left;
+    }
+    ul.slick-dots li.slick-active button {
+        background: #9db7b8;
+    }
+}
+
+@media all and (max-width: 767px) {
+    .bSlider .bSliderImageWrapper {
+        min-height: 70vh;
+    }
+}
+@media all and (min-width: 768px) and (max-width:1023px) {
+    
+}
+
+// Banner Slider Ends
+
+// New Arrivals Slider Starts
+@mixin sliderArrows {
+    display: block;
+    font-size: 0;
+    width: 25px;
+    height: 25px;
+    background: #f4f4f4;
+}
+@mixin sliderNextArrowsPosition{
+    transform: rotate(135deg);
+}
+@mixin sliderPrevArrowsPosition{
+    transform: rotate(135deg);
+}
+
+.newArrivalWrapper {
+    background: #f4f4f4;
+    padding: 55px 0 80px 0;
+
+    .newArrivalCard {
+        margin: 0 10px;
+      }
+      .newSliderMainInner {
+        background-size: cover !important;
+        min-height: 375px;
+        border-radius: 20px;
+    }
+    .newSliderContentWrapper {
+        text-align: center;
+        padding-top: 20px;
+
+        .sliderImageTitle {
+            font-family: 'gilroy-medium';
+            font-size: 1.15rem;
+            margin-bottom: 15px;
+        }
+
+        .sliderImagePrice {
+            font-family: "gilroy-bold";
+            font-size: 23px;
+            color: #1e53a0;
+            margin-bottom: 16px;
+        }
+    }
+    .newArrivalsSliderContainer .slick-next {
+        position: absolute;
+        top: 50%;
+        left: calc(100% + 15px);
+    }
+    .newArrivalsSliderContainer .slick-next{
+        @include sliderArrows;
+        border-top: 2px solid #000;
+        border-left: 2px solid #000;
+        border-bottom: 2px solid #f4f4f4;
+        border-right: 2px solid #f4f4f4;
+        @include sliderNextArrowsPosition;
+    }
+    .newArrivalsSliderContainer .slick-prev {
+        position: absolute;
+        top: 50%;
+        left: -41px;
+    }
+    .newArrivalsSliderContainer .slick-prev{
+        @include sliderArrows;
+        border-bottom: 2px solid #000;
+        border-right: 2px solid #000;
+        border-top: 2px solid #f4f4f4;
+        border-left: 2px solid #f4f4f4;
+        @include sliderPrevArrowsPosition;
+    }
+    .newArrivalsSliderContainer .slick-prev.slick-disabled{
+        border-bottom: 2px solid #c3c3c3;
+        border-right: 2px solid #c3c3c3;
+    }
+    .newArrivalsSliderContainer .slick-next.slick-disabled{
+        border-top: 2px solid #c3c3c3;
+        border-left: 2px solid #c3c3c3;
+    }
+}
+
+
+@media all and (max-width: 767px) {
+    .newArrivalWrapper{
+        padding: 25px 0 40px 0;
+    }
+    .newArrivalSlider {
+        padding: 0 15px;
+
+        .newSliderMainInner {
+            min-height: 330px;
+            max-width: 250px;
+        }
+        .newSliderContentWrapper {
+            max-width: 250px;
+        }
+    }
+}
+  
+// New Arrivals Slider Ends
+
+// Shop By Range Slider Starts
+.rangeSlider{
+    background: #f4f4f4;
+    padding: 55px 0 80px 0;
+
+    .rangeSliderMainInner {
+        background-size: cover !important;
+        min-height: 300px;
+        border-radius: 20px;
+    }
+    .rangeSliderCard{
+        margin: 0 10px;
+    }
+    .rangeSliderImageTitle {
+        font-family: 'gilroy-medium';
+        font-size: 22px;
+        text-align: center;
+        margin-top: 18px;
+    }
+    .rangeSliderCarousel .slick-next {
+        position: absolute;
+        top: 50%;
+        left: calc(100% + 15px);
+    }
+    .rangeSliderCarousel .slick-next{
+        @include sliderArrows;
+        border-top: 2px solid #000;
+        border-left: 2px solid #000;
+        border-bottom: 2px solid #f4f4f4;
+        border-right: 2px solid #f4f4f4;
+        @include sliderNextArrowsPosition;
+    }
+    .rangeSliderCarousel .slick-prev {
+        position: absolute;
+        top: 50%;
+        left: -41px;
+    }
+    .rangeSliderCarousel .slick-prev{
+        @include sliderArrows;
+        border-bottom: 2px solid #000;
+        border-right: 2px solid #000;
+        border-top: 2px solid #f4f4f4;
+        border-left: 2px solid #f4f4f4;
+        @include sliderPrevArrowsPosition;
+    }
+    .rangeSliderCarousel .slick-prev.slick-disabled{
+        border-bottom: 2px solid #c3c3c3;
+        border-right: 2px solid #c3c3c3;
+    }
+    .rangeSliderCarousel .slick-next.slick-disabled{
+        border-top: 2px solid #c3c3c3;
+        border-left: 2px solid #c3c3c3;
+    }
+}
+
+@media all and (max-width: 767px) {
+    .rangeSlider {
+        padding: 25px 0 40px 0;
+    }
+    .rangeSliderContainer {
+        padding: 0 15px;
+    }
+    .rangeSlider .rangeSliderMainInner {
+        min-height: 250px;
+        width: 250px;
+    }
+}
+// Shop By Range Slider Ends
+
+// Customer Image Slider Starts
+.customerImage{
+    background: #f4f4f4;
+    padding: 55px 0 80px 0;
+
+    .customerImageSliderMainInner {
+        background-size: cover !important;
+        min-height: 375px;
+        min-width: 295px;
+        border-radius: 20px;
+    }
+    .customerImageSliderCard {
+        margin: 0 10px;
+    }
+}
+// Customer Image Slider Ends

@@ -1,0 +1,17 @@
+/*-- Bootstrap File --*/
+@import "bootstrap";
+
+/**-- Common --*/
+@import "common";
+@import "header";
+@import "footer";
+
+/*-- Fonts --*/
+@import "fonts";
+
+/*-- Icons scss --*/
+@import "icons";
+
+/*-- Plugin scss --*/
+@import "pluginOverwrite";
+

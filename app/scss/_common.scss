@@ -1,0 +1,24 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong {
+  font-family: "gilroy-bold";
+  .light,
+  &.light {
+    font-family: "gilroy-light";
+  }
+}
+
+.btn-green{
+  background-color: #38947d;
+  border-color: #38947d;
+  color: #fff;
+
+  &:hover{
+    color: #fff;
+  }
+}

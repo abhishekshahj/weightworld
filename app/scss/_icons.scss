@@ -1,0 +1,639 @@
+/*-- Icons --*/
+.icon {
+  background: url("../images/sprit.png?v3") center center no-repeat;
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+
+  &-sm {
+    height: 16px;
+    width: 16px;
+  }
+
+  &-login {
+    background-position: -75px 1px;
+    background-size: 600px auto;
+    height: 17px;
+    width: 16px;
+    vertical-align: middle;
+  }
+
+  &-call {
+    background-position: -106px 1px;
+    background-size: 500px;
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+  }
+  &-liveChat {
+    background-position: -80px 1px;
+    background-size: 500px;
+    height: 20px;
+    width: 20px;
+    vertical-align: text-bottom;
+  }
+
+  &-cart {
+    background-position: 5px -59px;
+    height: 40px;
+    width: 45px;
+    background-size: 650px auto;
+  }
+
+  &-priceMatch {
+    background-position: 1px -20px;
+    height: 37px;
+    width: 33px;
+    background-size: 580px auto;
+    vertical-align: middle;
+  }
+  &-priceMatchPound {
+    background-position: -45px -218px;
+    height: 37px;
+    width: 33px;
+    background-size: 580px auto;
+    vertical-align: middle;
+  }
+  &-delivery {
+    background-position: -70px -23px;
+    height: 34px;
+    width: 48px;
+    background-size: 580px auto;
+    vertical-align: middle;
+  }
+  &-dataProtection {
+    background-position: -33px -21px;
+    height: 35px;
+    width: 36px;
+    background-size: 580px auto;
+    vertical-align: middle;
+  }
+  &-greenCheck {
+    background-position: -159px -324px;
+    height: 21px;
+    width: 27px;
+    vertical-align: middle;
+  }
+
+  &-deliveryTruck {
+    background-position: -193px -324px;
+    height: 25px;
+    width: 32px;
+    vertical-align: middle;
+  }
+
+  &-dubbalArrow {
+    background-position: -231px -326px;
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+  }
+  &-deliveryUk {
+    background-position: 2px 0px;
+    height: 25px;
+    width: 32px;
+    vertical-align: middle;
+  }
+  &-international {
+    background-position: -256px -321px;
+    height: 30px;
+    width: 32px;
+    vertical-align: middle;
+  }
+
+  /*-- sub menu icons --*/
+
+  &-brainHealth {
+    background-position: -111px 12px;
+  }
+  &-cellulite {
+    background-position: -152px 11px;
+  }
+  &-circulation {
+    background-position: -192px 11px;
+  }
+  &-collagen {
+    background-position: -229px 11px;
+  }
+  &-detoxCleanse {
+    background-position: -266px 11px;
+  }
+  &-digestion {
+    background-position: -337px 7px;
+    background-size: 500px auto !important;
+  }
+  &-doubleChin {
+    background-position: -377px 8px;
+    background-size: 500px auto !important;
+  }
+  &-diureetit {
+    background-position: 4px -178px;
+    background-size: 500px auto !important;
+  }
+  &-heartHealth {
+    background-position: -373px 11px;
+  }
+  &-immuneSystem {
+    background-position: -413px 11px;
+  }
+  &-jointsBones {
+    background-position: -140px -47px;
+    background-size: 600px auto !important;
+  }
+  &-stretchMarks {
+    background-position: -147px -37px;
+    background-size: 500px auto !important;
+  }
+
+  &-appetiteSuppressants {
+    background-position: -187px -38px;
+    background-size: 500px auto !important;
+  }
+  &-carbBlockers {
+    background-position: -227px -38px;
+    background-size: 500px auto !important;
+  }
+  &-fatBurners {
+    background-position: -295px -42px;
+    background-size: 550px auto !important;
+  }
+  &-metabolismBoosters {
+    background-position: -303px -38px;
+    background-size: 500px auto !important;
+  }
+  &-shapewear {
+    background-position: -411px -49px;
+    background-size: 600px auto !important;
+  }
+  &-slimmingPatches {
+    background-position: -374px -38px;
+    background-size: 500px auto !important;
+  }
+  &-aminoAcids {
+    background-position: -418px -38px;
+    background-size: 500px auto !important;
+  }
+  &-muscleGainers {
+    background-position: -460px -38px;
+    background-size: 500px auto !important;
+  }
+  &-muscleToners {
+    background-position: -122px -80px;
+    background-size: 500px auto !important;
+  }
+
+  &-vegan {
+    background-position: -164px -80px;
+    background-size: 500px auto !important;
+  }
+  &-ayurvedic {
+    background-position: -205px -80px;
+    background-size: 500px auto !important;
+  }
+
+  &-checkMark {
+    background-position: -468px -101px;
+    background-size: 550px auto !important;
+    height: 16px;
+    width: 16px;
+    vertical-align: middle;
+    margin-left: 5px;
+  }
+  &-arrowRight {
+    background-position: -441px -82px;
+    background-size: 450px auto !important;
+    height: 14px;
+    width: 10px;
+    vertical-align: middle;
+  }
+  &-arrowDown {
+    background-position: -619px -119px;
+    background-size: 650px auto !important;
+    height: 17px;
+    width: 17px;
+  }
+  &-arrowRightWhite {
+    background-position: -620px -125px;
+    background-size: 650px auto !important;
+    height: 8px;
+    width: 14px;
+    transform: rotate(-90deg);
+  }
+  &-inStock {
+    background-position: -69px -182px;
+    background-size: 550px auto !important;
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+  }
+  &-vitaminA{
+    background-position: -226px -215px;
+    background-size: 580px auto !important;
+  }
+  &-vitaminB{
+    background-position: -272px -215px;
+    background-size: 580px auto !important;
+  }
+  &-vitaminC{
+    background-position: -313px -215px;
+    background-size: 580px auto !important;
+  }
+  &-vitaminD{
+    background-position: -356px -215px;
+    background-size: 580px auto !important;
+  }
+  &-vitaminE{
+    background-position: -399px -215px;
+    background-size: 580px auto !important;
+  }
+  &-vitaminK{
+    background-position: -442px -215px;
+    background-size: 580px auto !important;
+  }
+  &-vitaminB9{
+    background-position: -484px -215px;
+    background-size: 580px auto !important;
+  }
+  &-iron{
+    background-position: -527px -215px;
+    background-size: 580px auto !important;
+  }
+  &-magnesium{
+    background-position: 0px -258px;
+    background-size: 580px auto !important;
+  }
+  &-zinc{
+    background-position: -43px -258px;
+    background-size: 580px auto !important;
+  }
+  &-calcium{
+    background-position: -85px -258px;
+    background-size: 580px auto !important;
+  }
+  &-potassiumCitrate{
+    background-position: -128px -258px;
+    background-size: 580px auto !important;
+  }
+  /*-- social media --*/
+
+  &-facebook {
+    background-position: -1px -151px;
+    background-size: 550px auto !important;
+    height: 28px;
+    width: 28px;
+  }
+  &-youtube {
+    background-position: -36px -150px;
+    background-size: 550px auto !important;
+    height: 28px;
+    width: 33px;
+  }
+  &-instagram {
+    background-position: -76px -150px;
+    background-size: 550px auto !important;
+    height: 28px;
+    width: 28px;
+  }
+
+  /*-- flag --*/
+
+  &-gbp {
+    background-position: 1px 0px;
+    background-size: 550px auto !important;
+    height: 15px;
+    width: 18px;
+    vertical-align: middle;
+  }
+
+  &-footerLogo {
+    background-position: -466px -123px;
+    background-size: 550px auto !important;
+    height: 59px;
+    width: 61px;
+    vertical-align: middle;
+  }
+  &-foPayment {
+    background-size: 500px auto !important;
+    background-position: -99px -133px;
+    height: 35px;
+    width: 303px;
+    vertical-align: middle;
+  }
+  &-edit {
+    background-position: -322px -330px;
+  }
+  &-eye {
+    background-position: -345px -327px;
+  }
+  &-eyeBlock {
+    background-position: -373px -327px;
+  }
+  /*-- New Iocn for category --*/
+  &-vitaminsMinerals {
+    background-position: -85px -212px;
+    background-size: 580px auto !important;
+  }
+  &-organic {
+    background-position: -144px -212px;
+    background-size: 580px auto !important;
+  }
+}
+
+.imgIcon {
+  background: url("../images/ww-cat-icons.jpeg") no-repeat;
+  background-size: 340px auto;
+  width: 86px;
+  height: 65px;
+  margin: 0 auto;
+  margin-top: 2px;
+
+  &-acai {
+    background-position: -86px -5px;
+  }
+  &-activatedCharcoal {
+    background-position: -255px -130px;
+  }
+  &-africanMango {
+    background-position: -170px -5px;
+  }
+  &-baobab {
+    background-position: -258px -195px;
+  }
+  &-barleyWheat {
+    background-position: -5px -70px;
+  }
+  &-chlorella {
+    background-position: -172px -260px;
+  }
+  &-coconut {
+    background-position: -260px -5px;
+  }
+  &-fenugreek {
+    background-position: -255px -70px;
+  }
+  &-forskolin {
+    background-position: -5px -130px;
+  }
+  &-garciniaCambogia {
+    background-position: -85px -135px;
+  }
+  &-glucomannan {
+    background-position: -170px -72px;
+  }
+  &-greenCoffee {
+    background-position: -170px -130px;
+  }
+  &-greenMagic {
+    background-position: 0 -195px;
+  }
+  &-greenTea {
+    background-position: -85px -70px;
+  }
+  &-guarana {
+    background-position: -90px -260px;
+  }
+  &-hemp {
+    background-position: -85px -196px;
+  }
+  &-moringa {
+    background-position: -5px -5px;
+  }
+  &-raspberryKetone {
+    background-position: 0 -260px;
+  }
+  &-resveratrol {
+    background-position: -250px -260px;
+  }
+  &-spirulina {
+    background-position: -175px -197px;
+  }
+  &-turmeric {
+    background-position: 0 -327px;
+  }
+}
+
+/*-- Tabs Icons --*/
+.tIcon {
+  background: url(../images/tab-icons.png) no-repeat;
+  display: table-cell;
+  float: left;
+  vertical-align: middle;
+  height: 38px;
+  width: 60px;
+  background-size: 90px auto;
+
+  &-ukDelivery {
+    background-position: 0px 3px;
+  }
+  &-ukDelivery2 {
+    background-position: 0px -225px;
+  }
+
+  &-interDeliveries {
+    background-position: 0px -35px;
+  }
+
+  &-parcelPackaging {
+    background-position: 0px -112px;
+  }
+
+  &-tollkostnader {
+    background-position: 0px -413px;
+  }
+  &-klarnafaktura {
+    background-position: 0px -448px;
+  }
+
+  &-whenReceiveOrder {
+    background-position: 0px -72px;
+  }
+
+  &-timeDelivery {
+    background-position: 0px -149px;
+  }
+  &-countriesDelivered {
+    background-position: 0px -187px;
+  }
+  &-receiptPackage {
+    background-position: -2px -264px;
+  }
+  &-orderNotArrived {
+    background-position: 0px -301px;
+  }
+
+  &-signatureParcels {
+    background-position: 0 -264px;
+  }
+
+  &-trackParcel {
+    background-position: 0px -340px;
+  }
+  &-back {
+    background-position: 0 -375px;
+  }
+}
+
+.pIcon {
+  background: url(../images/payment-tab-icons.png) no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  height: 42px;
+  width: 60px;
+  background-size: 110px auto;
+
+  &-creditDebit {
+    background-position: -6px 0;
+  }
+  &-payPal {
+    background-position: -6px -293px;
+  }
+  &-cash {
+    background-position: -6px -91px;
+  }
+  &-zahlungNachnahme {
+    background-position: -2px -137px;
+    width: 50px;
+  }
+  &-amazonPay {
+    background-position: -6px -663px;
+    width: 50px;
+  }
+  &-bankTransfer {
+    background-position: -6px -46px;
+  }
+  &-overPhone {
+    background-position: -6px -508px;
+  }
+  &-achterafBetalenNl {
+    background-position: -6px -417px;
+  }
+  &-ideal {
+    background-position: -11px -587px;
+  }
+  &-achterafBetalen {
+    background-position: -11px -548px;
+  }
+  &-mistercashBancontact {
+    background-position: -10px -626px;
+  }
+}
+
+.fIcon {
+  background: url(../images/faq-tab-icons.png) no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  height: 38px;
+  width: 38px;
+  background-size: 100px auto;
+
+  &-aboutUs {
+    background-position: -5px -4px;
+  }
+  &-payment {
+    background-position: -7px -40px;
+  }
+  &-ordering {
+    background-position: -6px -75px;
+  }
+  &-deliver {
+    background-position: -6px -116px;
+  }
+  &-returns {
+    background-position: -7px -152px; 
+  }
+  &-security {
+    background-position: -6px -187px;
+  }
+}
+
+.hIconFlag {
+  background: url("../images/flags.png") center center no-repeat;
+  display: inline-block;
+  height: 10px;
+  width: 16px;
+
+  &-gbp {
+    background-position: -34px 0;
+  }
+  &-sek {
+    background-position: -34px -12px;
+  }
+  &-eur {
+    background-position: -34px -24px;
+  }
+  &-dkk {
+    background-position: -34px -110px;
+  }
+  &-nok {
+    background-position: -34px -37px;
+  }
+  &-pln {
+    background-position: -34px -97px;
+  }
+  &-usd {
+    background-position: -34px -49px;
+  }
+  &-cad {
+    background-position: -34px -72px;
+  }
+  &-aud {
+    background-position: -34px -122px;
+  }
+  &-nzd {
+    background-position: -34px -122px;
+  }
+  &-brl {
+    background-position: -34px -86px;
+  }
+  &-mxn {
+    background-position: -7px -175px;
+  }
+  &-chf {
+    background-position: -34px -134px;
+  }
+}
+
+.thIcon {
+  display: inline-block;
+  &-kR {
+    background: #535353;
+    font-size: 16px;
+    border-radius: 50px;
+    color: #fff;
+    text-align: center;
+    line-height: 24px;
+    height: 24px;
+    width: 24px;
+    display: inline-block;
+
+    &::after {
+      content: "Kr";
+      font-size: 14px;
+    }
+  }
+  &-kHandle {
+    background: url(../images/tab-icons.png);
+    background-position: -14px -1318px;
+    height: 25px;
+    width: 22px;
+    display: inline-block;
+    background-size: auto 450px;
+  }
+}
+
+.qtyIcon {
+  background: url("../images/qtyIcons.png");
+  display: inline-block;
+  background-size: 45px auto;
+  vertical-align: middle;
+  margin-right: 5px;
+  height: 22px;
+  width: 18px;
+
+  &-moneyback {
+    background-position: -2px -1px;
+  }
+  &-freeDelivery {
+    background-position: -2px -22px;
+  }
+}
