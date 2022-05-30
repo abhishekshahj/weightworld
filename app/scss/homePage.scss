@@ -257,5 +257,54 @@
     .customerImageSliderCard {
         margin: 0 10px;
     }
+    .green-color{
+        color: #99c355 !important;
+    }
+    h2{
+        font-size: 43px;
+        margin-bottom: 80px;
+    }
+}
+@media all and (max-width: 1200px) {
+    h2{
+        font-size: 24.575px !important;
+        margin-bottom: 40px !important;
+    }
 }
 // Customer Image Slider Ends
+
+// Latest Artical Starts
+.latestArtical{
+    padding: 55px 0 80px 0;
+
+    a{
+        color: #000;
+        text-decoration: none;
+    }
+
+    &MainTitle{
+        margin-bottom: 40px;
+    }
+    &ImageWrapper {
+        background-size: cover !important;
+        min-height: 330px;
+        border-radius: 20px;
+    }
+    &TextWrapper{
+        margin-top: 24px;
+    }
+    &Title{
+        margin-top: 15px;
+    }
+}
+
+@media all and (max-width: 767px) {
+    .latestArtical {
+        padding: 25px 0 40px 0;
+
+        &ContentWrapper {
+            margin-bottom: 30px;
+        }
+    }
+}
+// Latest Artical Ends

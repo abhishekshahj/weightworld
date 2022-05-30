@@ -224,3 +224,47 @@
 .customerImage .customerImageSliderCard {
   margin: 0 10px;
 }
+.customerImage .green-color {
+  color: #99c355 !important;
+}
+.customerImage h2 {
+  font-size: 43px;
+  margin-bottom: 80px;
+}
+
+@media all and (max-width: 1200px) {
+  h2 {
+    font-size: 24.575px !important;
+    margin-bottom: 40px !important;
+  }
+}
+.latestArtical {
+  padding: 55px 0 80px 0;
+}
+.latestArtical a {
+  color: #000;
+  text-decoration: none;
+}
+.latestArticalMainTitle {
+  margin-bottom: 40px;
+}
+.latestArticalImageWrapper {
+  background-size: cover !important;
+  min-height: 330px;
+  border-radius: 20px;
+}
+.latestArticalTextWrapper {
+  margin-top: 24px;
+}
+.latestArticalTitle {
+  margin-top: 15px;
+}
+
+@media all and (max-width: 767px) {
+  .latestArtical {
+    padding: 25px 0 40px 0;
+  }
+  .latestArticalContentWrapper {
+    margin-bottom: 30px;
+  }
+}
