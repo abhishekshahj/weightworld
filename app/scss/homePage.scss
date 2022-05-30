@@ -80,7 +80,7 @@
     font-size: 0;
     width: 25px;
     height: 25px;
-    background: #f4f4f4;
+    background: transparent;
 }
 @mixin sliderNextArrowsPosition{
     transform: rotate(135deg);
@@ -243,6 +243,65 @@
 }
 // Shop By Range Slider Ends
 
+// Supplements You Can Trust Starts
+.suppYouCanTrust{
+    padding: 55px 0 80px 0;
+}
+.suppContentWrapper {
+    text-align: center;
+
+    .suppMainTitle{
+        font-size: 64.29px;
+        font-family: 'gilroy-light';
+        margin-bottom: 30px;
+    }
+    .suppSubTitle {
+        font-size: 26.76px;
+        font-family: 'gilroy-medium';
+        margin-bottom: 30px;
+    }
+    .suppContent {
+        font-size: 17.14px;
+        font-family: 'gilroy-medium';
+        margin-bottom: 60px;
+    }
+}
+.suppImageWrapper{
+    text-align: center;
+
+    .suppImage {
+        min-height: 57px;
+        border-radius: 20px;
+    }
+    .suppContent {
+        font-size: 17.14px;
+        font-family: "gilroy-medium";
+        margin-top: 35px;
+    }
+}
+@media all and (max-width: 767px) {
+    .suppYouCanTrust{
+        padding: 25px 0 40px 0;
+    }
+    .suppContentWrapper {
+        .suppContent {
+            margin-bottom: 30px;
+        }
+        .suppSubTitle {
+            font-size: 26.76px;
+            font-family: "gilroy-medium";
+            margin-bottom: 20px;
+        }
+    }
+    .suppImageWrapper {
+        margin-bottom: 20px;
+    }
+    .suppImageWrapper .suppContent {
+        margin-top: 15px;
+    }
+}
+// Supplements You Can Trust Ends
+
 // Customer Image Slider Starts
 .customerImage{
     background: #f4f4f4;
@@ -308,3 +367,79 @@
     }
 }
 // Latest Artical Ends
+
+// Customer Review Starts
+.customerReview{
+    margin-top: 60px;
+    
+    &LeftSectionTitle{
+        font-size: 21.43px;
+        font-family: 'gilroy-medium';
+        margin-bottom: 25px;
+    }
+    &LeftSection {
+        background: #f0f0f0;
+        border-radius: 0 20px 20px 0;
+        padding: 110px 0;
+    }
+    &LeftSection::before {
+        content: "";
+        position: absolute;
+        right: 100%;
+        width: 100vw;
+        top: 0;
+        bottom: 0;
+        background: #f0f0f0;
+    }
+    &Title{
+        font-size: 53.57px;
+        width: 52%;
+        text-align: center;
+        margin-top: 8px;
+    }
+    &SliderWrapper {
+        background: #fafafc;
+        padding: 35px;
+        border-radius: 20px;
+        margin: 0 10px;
+        min-width: 400px;
+    }
+   &CardContent {
+        margin-top: 20px;
+    }
+   &CardTitle {
+        margin-top: 25px;
+        font-size: 21.43px;
+    }
+   &Slider {
+        background-color: transparent;
+        padding-left: 36.5%;
+        transform: translateY(-150%);
+    }
+}
+
+@media all and (min-width: 768px) and (max-width:1023px) {
+    .customerReview{
+
+        &LeftSection{
+            min-width: 100%;
+            border-radius: 0;
+        }
+//         &LeftSection::after {
+//             content: "";
+//             position: absolute;
+//             left: 100%;
+//             width: 100vw;
+//             top: 0;
+//             bottom: 0;
+//             background: #f0f0f0;
+//         }
+        &Slider {
+            background-color: transparent;
+            padding-left: 3%;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+// Customer Review Ends

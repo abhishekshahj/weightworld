@@ -129,5 +129,15 @@ $(document).ready(function(){
     });
 
     // Customer Image Slider Ends
+
+    // Customer Review Slider Starts
+    $('.customerReviewSlider').slick({
+      variableWidth: true,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      infinite: true,
+      arrows: false,
+    });
+    // Customer Review Slider Ends
     
   });

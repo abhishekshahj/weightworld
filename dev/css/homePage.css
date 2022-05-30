@@ -87,7 +87,7 @@
   font-size: 0;
   width: 25px;
   height: 25px;
-  background: #f4f4f4;
+  background: transparent;
   border-top: 2px solid #000;
   border-left: 2px solid #000;
   border-bottom: 2px solid #f4f4f4;
@@ -104,7 +104,7 @@
   font-size: 0;
   width: 25px;
   height: 25px;
-  background: #f4f4f4;
+  background: transparent;
   border-bottom: 2px solid #000;
   border-right: 2px solid #000;
   border-top: 2px solid #f4f4f4;
@@ -164,7 +164,7 @@
   font-size: 0;
   width: 25px;
   height: 25px;
-  background: #f4f4f4;
+  background: transparent;
   border-top: 2px solid #000;
   border-left: 2px solid #000;
   border-bottom: 2px solid #f4f4f4;
@@ -181,7 +181,7 @@
   font-size: 0;
   width: 25px;
   height: 25px;
-  background: #f4f4f4;
+  background: transparent;
   border-bottom: 2px solid #000;
   border-right: 2px solid #000;
   border-top: 2px solid #f4f4f4;
@@ -209,6 +209,64 @@
   .rangeSlider .rangeSliderMainInner {
     min-height: 250px;
     width: 250px;
+  }
+}
+.suppYouCanTrust {
+  padding: 55px 0 80px 0;
+}
+
+.suppContentWrapper {
+  text-align: center;
+}
+.suppContentWrapper .suppMainTitle {
+  font-size: 64.29px;
+  font-family: "gilroy-light";
+  margin-bottom: 30px;
+}
+.suppContentWrapper .suppSubTitle {
+  font-size: 26.76px;
+  font-family: "gilroy-medium";
+  margin-bottom: 30px;
+}
+.suppContentWrapper .suppContent {
+  font-size: 17.14px;
+  font-family: "gilroy-medium";
+  margin-bottom: 60px;
+}
+
+.suppImageWrapper {
+  text-align: center;
+}
+.suppImageWrapper .suppImage {
+  min-height: 57px;
+  border-radius: 20px;
+}
+.suppImageWrapper .suppContent {
+  font-size: 17.14px;
+  font-family: "gilroy-medium";
+  margin-top: 35px;
+}
+
+@media all and (max-width: 767px) {
+  .suppYouCanTrust {
+    padding: 25px 0 40px 0;
+  }
+
+  .suppContentWrapper .suppContent {
+    margin-bottom: 30px;
+  }
+  .suppContentWrapper .suppSubTitle {
+    font-size: 26.76px;
+    font-family: "gilroy-medium";
+    margin-bottom: 20px;
+  }
+
+  .suppImageWrapper {
+    margin-bottom: 20px;
+  }
+
+  .suppImageWrapper .suppContent {
+    margin-top: 15px;
   }
 }
 .customerImage {
@@ -266,5 +324,64 @@
   }
   .latestArticalContentWrapper {
     margin-bottom: 30px;
+  }
+}
+.customerReview {
+  margin-top: 60px;
+}
+.customerReviewLeftSectionTitle {
+  font-size: 21.43px;
+  font-family: "gilroy-medium";
+  margin-bottom: 25px;
+}
+.customerReviewLeftSection {
+  background: #f0f0f0;
+  border-radius: 0 20px 20px 0;
+  padding: 110px 0;
+}
+.customerReviewLeftSection::before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  width: 100vw;
+  top: 0;
+  bottom: 0;
+  background: #f0f0f0;
+}
+.customerReviewTitle {
+  font-size: 53.57px;
+  width: 52%;
+  text-align: center;
+  margin-top: 8px;
+}
+.customerReviewSliderWrapper {
+  background: #fafafc;
+  padding: 35px;
+  border-radius: 20px;
+  margin: 0 10px;
+  min-width: 400px;
+}
+.customerReviewCardContent {
+  margin-top: 20px;
+}
+.customerReviewCardTitle {
+  margin-top: 25px;
+  font-size: 21.43px;
+}
+.customerReviewSlider {
+  background-color: transparent;
+  padding-left: 36.5%;
+  transform: translateY(-150%);
+}
+
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .customerReviewLeftSection {
+    min-width: 100%;
+    border-radius: 0;
+  }
+  .customerReviewSlider {
+    background-color: transparent;
+    padding-left: 3%;
+    transform: translateY(-50%);
   }
 }
