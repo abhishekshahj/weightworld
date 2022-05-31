@@ -24,6 +24,22 @@ $(document).ready(function(){
     
     // Banner Slider Ends
 
+    // Banner Slider Full Height Starts
+    var topBelt = $(".topBelt").outerHeight();
+    var topHeader = $("nav.navbar").outerHeight();
+    var totalHeight = topBelt + topHeader;
+    
+    $(".bSlider .bSliderImageWrapper").css("min-height","calc(100vh - "+totalHeight+"px)")
+
+    $(window).resize(function(){
+      var topBelt = $(".topBelt").outerHeight();
+      var topHeader = $("nav.navbar").outerHeight();
+      var totalHeight = topBelt + topHeader;
+      console.log(totalHeight);
+      $(".bSlider .bSliderImageWrapper").css("min-height","calc(100vh - "+totalHeight+"px)")
+    });
+    // Banner Slider Full Height Ends
+
     // New Arrivals Slider Starts
 
     $('.carousel').slick({
@@ -139,5 +155,52 @@ $(document).ready(function(){
       arrows: false,
     });
     // Customer Review Slider Ends
+
+    // Best Seller Slider Starts
+    $('.banner-slider-container')
+  .on('init', function(event, slick){
+    $('.slick-current').prev().addClass('prev');
+    $('.slick-current').next().addClass('next');
+  })
+  .on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    $('.slick-slide').removeClass('prev next');
+  })
+  .on('afterChange', function(event, slick, currentSlide, nextSlide){
+    $('.slick-current').prev().addClass('prev');
+    $('.slick-current').next().addClass('next');          
+  });
+  
+  if ($('.banner-slider-container').length) {
+    $('.banner-slider').each(function() {
+      if($(this).find('.banner-slider-inner-container').length > 2){
+        var modID = $(this).attr('id');
+        var slickElement1 = $('#' + modID + ' .banner-slider-container').not('.slick-initialized');
+        var modThis = $(this);
+        
+        slickElement1.on('init', function(event, slick){
+          var dots = $( '.slick-dots li' );
+          dots.each( function( k, v){
+            $(this).find( 'button' ).addClass( 'heading'+ k );
+          });
+          var items = slick.$slides;
+          items.each( function( k, v){
+            var text = $(this).find( 'h1' ).text();
+            $( '.heading' + k ).text(text);
+          });
+        });
+        
+        slickElement1.slick({
+          variableWidth: true,
+          infinite: true,
+          slidesToScroll: 1,
+          arrows: true,
+          focusOnSelect: true,
+          dots: true
+        });
+        
+      }
+    });
+  }
+    // Best Seller Slider Ends
     
   });

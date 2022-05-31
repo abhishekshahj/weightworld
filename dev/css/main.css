@@ -10302,6 +10302,9 @@ strong.light {
   background-color: #38947d;
   border-color: #38947d;
   color: #fff;
+  position: relative;
+  font-size: 19.66px;
+  padding: 15px 55px 15px 35px;
 }
 .btn-green:hover {
   color: #fff;
@@ -10313,6 +10316,47 @@ strong.light {
 
 .dropdown-toggle::after {
   border-color: #fff;
+}
+
+.searchBar {
+  width: 338px !important;
+  border-radius: 20px;
+  height: 44px;
+  font-size: 15px;
+}
+
+.cartIcon {
+  margin-left: 20px;
+  margin-right: 25px;
+  cursor: pointer;
+}
+
+.loginIcon {
+  margin-right: 15px;
+  padding-right: 25px;
+  border-right: 1px solid #e0e0e0;
+}
+
+.phoneCallIcon {
+  margin-right: 15px;
+}
+
+.phoneNumber {
+  display: flex;
+  flex-direction: column;
+}
+
+.phoneNumberText {
+  font-size: 14.28px;
+  font-family: "gilroy-bold";
+}
+.phoneNumberText a {
+  color: #000;
+  text-decoration: none;
+}
+
+.dailyTimings {
+  font-size: 11.22px;
 }
 
 .plusSign {
@@ -10345,6 +10389,11 @@ strong.light {
   margin-top: -2px;
 }
 
+@media all and (max-width: 767px) {
+  .searchBar {
+    width: 100% !important;
+  }
+}
 /*-- Fonts --*/
 @font-face {
   font-family: "gilroy-black";

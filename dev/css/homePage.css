@@ -18,7 +18,6 @@
   background-size: cover !important;
   position: relative;
   min-width: 100vw;
-  min-height: calc(100vh - 51px);
   float: left;
 }
 .bSlider ul {
@@ -50,6 +49,14 @@
     min-height: 70vh;
   }
 }
+.fARightArrow {
+  margin-left: 7px;
+  font-size: 19px;
+  position: absolute;
+  top: 17px;
+  right: 22px;
+}
+
 .newArrivalWrapper {
   background: #f4f4f4;
   padding: 55px 0 80px 0;
@@ -374,6 +381,10 @@
   transform: translateY(-150%);
 }
 
+.trustPilotLogo {
+  margin-left: 11%;
+}
+
 @media all and (min-width: 768px) and (max-width: 1023px) {
   .customerReviewLeftSection {
     min-width: 100%;
@@ -384,4 +395,53 @@
     padding-left: 3%;
     transform: translateY(-50%);
   }
+}
+.trustpilotBelt {
+  padding: 50px 0;
+  text-align: center;
+}
+.trustpilotBeltWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.trustpilotBeltLogo {
+  margin-top: -7px;
+  padding-right: 17px;
+  border-right: 1px solid #e0e0e0;
+}
+.trustpilotBeltText {
+  font-size: 21.43px;
+  font-family: "gilroy-light";
+  margin-left: 17px;
+}
+.trustpilotBeltText .dark {
+  font-family: "gilroy-bold";
+}
+
+@media all and (max-width: 767px) {
+  .trustpilotBeltText {
+    margin-left: auto;
+    display: block;
+    padding: 0 30px;
+    margin-top: 10px;
+  }
+  .trustpilotBeltWrapper {
+    display: block;
+  }
+  .trustpilotBeltLogo {
+    margin-top: -7px;
+    padding-right: 17px;
+    border-right: none;
+  }
+}
+.bestSeller {
+  padding: 55px 0 80px 0;
+}
+.bestSeller h2 {
+  color: #fff;
+}
+
+.greenBackground {
+  background-color: #84ac89;
 }
