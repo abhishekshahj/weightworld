@@ -1,7 +1,7 @@
 
 // Color system
 
-// $white:    #fff !default;
+$white:    #fff;
 // $gray-100: #f8f9fa !default;
 // $gray-200: #e9ecef !default;
 // $gray-300: #dee2e6 !default;
@@ -11,7 +11,7 @@
 // $gray-700: #495057 !default;
 // $gray-800: #343a40 !default;
 // $gray-900: #212529 !default;
-// $black:    #000 !default;
+$black:    #000;
 
 // $grays: () !default;
 // $grays: map-merge(
@@ -165,15 +165,15 @@ $enable-responsive-font-sizes:                true;
 //
 // Settings for the `<body>` element.
 
-// $body-bg:                   $white !default;
-// $body-color:                $gray-900 !default;
+// $body-bg:                   $white;
+$body-color:                #161616; //$gray-900;
 
 
 // Links
 //
 // Style anchor elements.
 
-// $link-color:                              theme-color("primary") !default;
+$link-color:                              $black;
 // $link-decoration:                         none !default;
 // $link-hover-color:                        darken($link-color, 15%) !default;
 // $link-hover-decoration:                   underline !default;

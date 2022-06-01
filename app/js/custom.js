@@ -1,27 +1,52 @@
 $(document).ready(function(){
-  
-    // Banner Slider Starts
-    
-    if ($('.bSliderContainer').length) {
-      $('.bSlider').each(function() {
-        if($(this).find('.bSliderInnerContainer').length > 2){
-          var modID = $(this).attr('id');
-          var slickElement1 = $('#' + modID + ' .bSliderContainer').not('.slick-initialized');
-          
-          slickElement1.slick({
-            variableWidth: true,
-            infinite: true,
-            slidesToScroll: 1,
-            autoplay: true,
-            arrows: false,
-            focusOnSelect: true,
-            dots: true
+
+  // Best Seller Slider Starts
+  if ($('.bestSellerSliderContainer').length) {
+    $('.bestSellerSlider').each(function() {
+      if($(this).find('.bestSellerSliderInnerContainer').length > 2){
+        var modIDBestSeller = $(this).attr('id');
+        var slickElement2 = $('#' + modIDBestSeller + ' .bestSellerSliderContainer').not('.slick-initialized');
+        var modThisEle = $(this);
+        
+        slickElement2.on('init', function(event, slick){
+          var slickDots = $( '.slick-dots li' );
+          slickDots.each( function( k, v){
+            $(this).find( 'button' ).addClass( 'heading'+ k );
           });
-          
-        }
-      });
-    }
-    
+          var items = slick.$slides;
+          items.each( function( k, v){
+            var text = $(this).find( 'h2 .bestSellerTag' ).text();
+            $( '.heading' + k ).text(text);
+          });
+        });
+        
+        slickElement2.slick({
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          focusOnSelect: true,
+          dots: true,
+          appendDots: $(".customSlickDots")
+        });
+        
+      }
+    });
+  }
+
+  // $(".customSlickDots ul li.slick-active button").attr("data-val",val);
+  // Best Seller Slider Ends
+  
+    // Banner Slider Starts 
+    $('.bSliderContainer').slick({
+      variableWidth: true,
+      infinite: true,
+      slidesToScroll: 1,
+      autoplay: true,
+      arrows: false,
+      focusOnSelect: true,
+      dots: true
+    });
     // Banner Slider Ends
 
     // Banner Slider Full Height Starts
@@ -35,7 +60,6 @@ $(document).ready(function(){
       var topBelt = $(".topBelt").outerHeight();
       var topHeader = $("nav.navbar").outerHeight();
       var totalHeight = topBelt + topHeader;
-      console.log(totalHeight);
       $(".bSlider .bSliderImageWrapper").css("min-height","calc(100vh - "+totalHeight+"px)")
     });
     // Banner Slider Full Height Ends
@@ -98,7 +122,7 @@ $(document).ready(function(){
           breakpoint: 767,
           settings: {
             variableWidth: true,
-            slidesToShow: 1,
+            slidesToShow: 2,
             slidesToScroll: 1,
             arrows: false,
             infinite: true
@@ -153,54 +177,54 @@ $(document).ready(function(){
       slidesToScroll: 1,
       infinite: true,
       arrows: false,
+      responsive: [
+        {
+          breakpoint: 767,
+          settings: {
+            variableWidth: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            infinite: true
+          }
+        }
+      ]
     });
     // Customer Review Slider Ends
 
-    // Best Seller Slider Starts
-    $('.banner-slider-container')
-  .on('init', function(event, slick){
-    $('.slick-current').prev().addClass('prev');
-    $('.slick-current').next().addClass('next');
-  })
-  .on('beforeChange', function(event, slick, currentSlide, nextSlide){
-    $('.slick-slide').removeClass('prev next');
-  })
-  .on('afterChange', function(event, slick, currentSlide, nextSlide){
-    $('.slick-current').prev().addClass('prev');
-    $('.slick-current').next().addClass('next');          
-  });
-  
-  if ($('.banner-slider-container').length) {
-    $('.banner-slider').each(function() {
-      if($(this).find('.banner-slider-inner-container').length > 2){
-        var modID = $(this).attr('id');
-        var slickElement1 = $('#' + modID + ' .banner-slider-container').not('.slick-initialized');
-        var modThis = $(this);
-        
-        slickElement1.on('init', function(event, slick){
-          var dots = $( '.slick-dots li' );
-          dots.each( function( k, v){
-            $(this).find( 'button' ).addClass( 'heading'+ k );
-          });
-          var items = slick.$slides;
-          items.each( function( k, v){
-            var text = $(this).find( 'h1' ).text();
-            $( '.heading' + k ).text(text);
-          });
-        });
-        
-        slickElement1.slick({
-          variableWidth: true,
-          infinite: true,
-          slidesToScroll: 1,
-          arrows: true,
-          focusOnSelect: true,
-          dots: true
-        });
-        
+    // Customer Review Height Starts
+    var reviewLeftSection = $(".customerReviewLeftSection").outerHeight()
+    $(".customerReview").css("height",reviewLeftSection+"px");
+    $(window).resize(function(){
+      var reviewLeftSection = $(".customerReviewLeftSection").outerHeight()
+      $(".customerReview").css("height",reviewLeftSection+"px");
+    });
+
+    // Customer Review Height Ends
+
+    // Supplements You Can Trust Starts
+    if ($(window).width() < 1023) {
+      var marginDivideTwo = (reviewLeftSection/2);
+      $(".suppYouCanTrust").css("margin-top",marginDivideTwo+"px");
+    }
+    $(window).resize(function(){
+      if ($(window).width() < 1023) {
+        var marginDivideTwo = (reviewLeftSection/2);
+        $(".suppYouCanTrust").css("margin-top",marginDivideTwo+"px");
       }
     });
+    // Supplements You Can Trust Ends
+
+    // Latest Artical Slider Starts
+    if ($(window).width() < 575) {
+      $('.latestArticalCarousel').slick({
+        variableWidth: true,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        arrows: false,
+      });
   }
-    // Best Seller Slider Ends
+    // Latest Artical Slider Ends
     
   });

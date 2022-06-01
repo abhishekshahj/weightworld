@@ -131,7 +131,6 @@
   .newArrivalWrapper {
     padding: 25px 0 40px 0;
   }
-
   .newArrivalSlider {
     padding: 0 15px;
   }
@@ -141,6 +140,17 @@
   }
   .newArrivalSlider .newSliderContentWrapper {
     max-width: 250px;
+  }
+
+  .btn-green {
+    font-size: 15.66px;
+    padding: 8px 35px 8px 15px;
+  }
+
+  .fARightArrow {
+    top: 8px;
+    right: 14px;
+    font-size: 17px;
   }
 }
 .rangeSlider {
@@ -303,6 +313,12 @@
     margin-bottom: 40px !important;
   }
 }
+@media all and (max-width: 767px) {
+  .customerImage .customerImageSliderMainInner {
+    min-height: 267px;
+    min-width: 206px;
+  }
+}
 .latestArtical {
   padding: 55px 0 80px 0;
 }
@@ -331,6 +347,15 @@
   }
   .latestArticalContentWrapper {
     margin-bottom: 30px;
+  }
+}
+@media all and (max-width: 575px) {
+  .latestArtical {
+    margin: 0 0 0 15px;
+  }
+  .latestArticalContentWrapper {
+    margin-left: 10px;
+    max-width: 250px;
   }
 }
 .customerReview {
@@ -378,22 +403,86 @@
 .customerReviewSlider {
   background-color: transparent;
   padding-left: 36.5%;
-  transform: translateY(-150%);
+  transform: translateY(-125%);
+}
+.customerReviewDetailImage {
+  display: flex;
+  vertical-align: middle;
+  align-items: center;
+}
+.customerReviewVerifiedWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+}
+.customerReviewDetailName {
+  font-size: 19.29px;
+  font-family: "gilroy-bold";
+}
+.customerReviewDetailVerified {
+  font-size: 12.86px;
+  font-family: "gilroy-light";
+}
+.customerReviewDetail {
+  margin-top: 50px;
 }
 
 .trustPilotLogo {
   margin-left: 11%;
 }
 
-@media all and (min-width: 768px) and (max-width: 1023px) {
+@media all and (max-width: 1023px) {
+  .customerReview {
+    background: #f0f0f0;
+  }
   .customerReviewLeftSection {
     min-width: 100%;
     border-radius: 0;
+    text-align: center;
   }
   .customerReviewSlider {
     background-color: transparent;
     padding-left: 3%;
-    transform: translateY(-50%);
+    transform: translateY(-30%);
+  }
+  .customerReviewTitle {
+    font-size: 53.57px;
+    width: auto;
+  }
+  .customerReview .trustPilotLogo {
+    margin-left: auto;
+  }
+  .customerReviewLeftSection {
+    background: none;
+    padding: 55px 15px 125px 15px;
+  }
+  .customerReviewLeftSection::before {
+    display: none;
+  }
+}
+@media all and (max-width: 767px) {
+  .customerReviewDetail {
+    margin-top: 20px;
+  }
+  .customerReviewSliderWrapper {
+    padding: 25px;
+    min-width: 300px;
+  }
+  .customerReviewCardTitle {
+    margin-top: 15px;
+  }
+  .customerReviewCardContent {
+    margin-top: 10px;
+  }
+  .customerReviewTitle {
+    font-size: 35.57px;
+  }
+  .customerReviewLeftSectionTitle {
+    margin-bottom: 21px !important;
+  }
+  .customerReviewLeftSection {
+    background: none;
+    padding: 38px 15px 100px 15px;
   }
 }
 .trustpilotBelt {
@@ -441,7 +530,72 @@
 .bestSeller h2 {
   color: #fff;
 }
+.bestSellerSlider {
+  width: 100%;
+}
+.bestSellerSliderContentWrapper {
+  width: 40%;
+  display: table-cell;
+  color: #fff;
+  vertical-align: middle;
+}
+.bestSellerSliderImageWrapper {
+  display: table-cell;
+}
+.bestSellerSliderImageWrapper img {
+  margin: 0 auto;
+}
+.bestSellerSliderItemValue {
+  font-size: 53.51px;
+  font-family: "gilroy-light";
+  float: left;
+  display: flex;
+  vertical-align: middle;
+  align-items: center;
+  margin-right: 20px;
+}
+.bestSellerSliderOldValueContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 34px;
+  border-left: 1px solid;
+  padding-left: 15px;
+}
+.bestSellerSliderOldItemValue {
+  text-decoration: line-through;
+}
+.bestSellerTag {
+  font-family: "gilroy-light";
+}
+
+.customSlickDots {
+  width: 100%;
+  text-align: center;
+  margin-top: 27px;
+}
+.customSlickDots ul {
+  list-style-type: none;
+}
+.customSlickDots ul li {
+  display: inline;
+  font-size: 17.14px;
+  font-family: "gilroy-light";
+  margin: 0 20px;
+}
+.customSlickDots ul li.slick-active button {
+  text-decoration: underline;
+}
+.customSlickDots ul li button {
+  background: transparent;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+}
 
 .greenBackground {
   background-color: #84ac89;
+}
+
+.banner-slider {
+  width: 1005px;
 }

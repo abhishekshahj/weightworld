@@ -84,5 +84,18 @@
 @media all and (max-width: 767px) {
     .searchBar{
         width: 100% !important;
-    }    
+    }
+    .topHeader {
+        padding: 15px 80px 15px 10px;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+    .navbar-light .navbar-toggler {
+        color: #000;
+        border-color: transparent;
+    }
+}
+
+@media all and (min-width: 768px) and (max-width:1023px) {
+    
 }

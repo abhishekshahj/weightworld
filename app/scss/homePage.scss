@@ -163,22 +163,32 @@
 
 
 @media all and (max-width: 767px) {
-    .newArrivalWrapper{
-        padding: 25px 0 40px 0;
+    .newArrival{
+        &Wrapper{
+            padding: 25px 0 40px 0;
+        }
+        &Slider {
+            padding: 0 15px;
+    
+            .newSliderMainInner {
+                min-height: 330px;
+                max-width: 250px;
+            }
+            .newSliderContentWrapper {
+                max-width: 250px;
+            }
+        }
     }
-    .newArrivalSlider {
-        padding: 0 15px;
-
-        .newSliderMainInner {
-            min-height: 330px;
-            max-width: 250px;
-        }
-        .newSliderContentWrapper {
-            max-width: 250px;
-        }
+    .btn-green {
+        font-size: 15.66px;
+        padding: 8px 35px 8px 15px;
+    }
+    .fARightArrow {
+        top: 8px;
+        right: 14px;
+        font-size: 17px;
     }
 }
-  
 // New Arrivals Slider Ends
 
 // Shop By Range Slider Starts
@@ -337,6 +347,12 @@
         margin-bottom: 40px !important;
     }
 }
+@media all and (max-width: 767px) {
+    .customerImage .customerImageSliderMainInner{
+        min-height: 267px;
+        min-width: 206px;
+    }
+}
 // Customer Image Slider Ends
 
 // Latest Artical Starts
@@ -370,6 +386,16 @@
 
         &ContentWrapper {
             margin-bottom: 30px;
+        }
+    }
+}
+@media all and (max-width: 575px) {
+    .latestArtical {
+        margin: 0 0 0 15px;
+
+        &ContentWrapper {
+            margin-left: 10px;
+            max-width: 250px;
         }
     }
 }
@@ -421,33 +447,88 @@
    &Slider {
         background-color: transparent;
         padding-left: 36.5%;
-        transform: translateY(-150%);
+        transform: translateY(-125%);
+    }
+    &DetailImage {
+        display: flex;
+        vertical-align: middle;
+        align-items: center;
+    }
+    &VerifiedWrapper {
+        display: flex;
+        flex-direction: column;
+        margin-left: 15px;
+    }
+    &DetailName {
+        font-size: 19.29px;
+        font-family: 'gilroy-bold';
+    }
+    &DetailVerified {
+        font-size: 12.86px;
+        font-family: 'gilroy-light';
+    }
+    &Detail{
+        margin-top: 50px;
     }
 }
 .trustPilotLogo{
     margin-left: 11%;
 }
 
-@media all and (min-width: 768px) and (max-width:1023px) {
+@media all and (max-width:1023px) {
     .customerReview{
+        background: #f0f0f0;
 
         &LeftSection{
             min-width: 100%;
             border-radius: 0;
+            text-align: center;
         }
-//         &LeftSection::after {
-//             content: "";
-//             position: absolute;
-//             left: 100%;
-//             width: 100vw;
-//             top: 0;
-//             bottom: 0;
-//             background: #f0f0f0;
-//         }
         &Slider {
             background-color: transparent;
             padding-left: 3%;
-            transform: translateY(-50%);
+            transform: translateY(-30%);
+        }
+        &Title {
+            font-size: 53.57px;
+            width: auto;
+        }
+        .trustPilotLogo {
+            margin-left: auto;
+        }
+        &LeftSection {
+            background: none;
+            padding: 55px 15px 125px 15px;
+        }
+        &LeftSection::before {
+            display: none;
+        }
+    }
+}
+@media all and (max-width: 767px) {
+    .customerReview{
+        &Detail {
+            margin-top: 20px;
+        }
+        &SliderWrapper {
+            padding: 25px;
+            min-width: 300px;
+        }
+        &CardTitle {
+            margin-top: 15px;
+        }
+        &CardContent {
+            margin-top: 10px;
+        }
+        &Title {
+            font-size: 35.57px;
+        }
+        &LeftSectionTitle {
+            margin-bottom: 21px !important;
+        }
+        &LeftSection {
+            background: none;
+            padding: 38px 15px 100px 15px;
         }
     }
 }
@@ -505,12 +586,81 @@
 // Best Seller Slider Starts
 .bestSeller{
     padding: 55px 0 80px 0;
-    
+
     h2{
         color: #fff;
+    }
+
+    &Slider {
+        width: 100%;
+
+        &ContentWrapper {
+            width: 40%;
+            display: table-cell;
+            color: #fff;
+            vertical-align: middle;
+        }
+        &ImageWrapper {
+            display: table-cell;
+
+            img{
+                margin: 0 auto;
+            }
+        }
+        &ItemValue {
+            font-size: 53.51px;
+            font-family: "gilroy-light";
+            float: left;
+            display: flex;
+            vertical-align: middle;
+            align-items: center;
+            margin-right: 20px;
+        }
+        &OldValueContainer {
+            display: flex;
+            flex-direction: column;
+            margin-top: 34px;
+            border-left: 1px solid;
+            padding-left: 15px;
+        }
+        &OldItemValue {
+            text-decoration: line-through;
+        }
+    }
+    &Tag {
+        font-family: 'gilroy-light';
+    }
+}
+.customSlickDots {
+    width: 100%;
+    text-align: center;
+    margin-top: 27px;
+
+    ul {
+        list-style-type: none;
+
+        li {
+            display: inline;
+            font-size: 17.14px;
+            font-family: 'gilroy-light';
+            margin: 0 20px;
+
+            &.slick-active button {
+                text-decoration: underline;
+            }
+            button {
+                background: transparent;
+                border: none;
+                color: #fff;
+                text-transform: uppercase;
+            }
+        }
     }
 }
 .greenBackground{
     background-color: #84ac89;
+}
+.banner-slider {
+    width: 1005px;
 }
 // Best Seller Slider Ends
