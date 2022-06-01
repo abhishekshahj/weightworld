@@ -68,9 +68,6 @@
         min-height: 70vh;
     }
 }
-@media all and (min-width: 768px) and (max-width:1023px) {
-    
-}
 
 // Banner Slider Ends
 
@@ -193,8 +190,8 @@
 
 // Shop By Range Slider Starts
 .rangeSlider{
-    background: #f4f4f4;
-    padding: 55px 0 80px 0;
+    background: #fff;
+    padding: 130px 0 80px 0;
 
     .rangeSliderMainInner {
         background-size: cover !important;
@@ -219,8 +216,8 @@
         @include sliderArrows;
         border-top: 2px solid #000;
         border-left: 2px solid #000;
-        border-bottom: 2px solid #f4f4f4;
-        border-right: 2px solid #f4f4f4;
+        border-bottom: 2px solid transparent;
+        border-right: 2px solid transparent;
         @include sliderNextArrowsPosition;
     }
     .rangeSliderCarousel .slick-prev {
@@ -232,8 +229,8 @@
         @include sliderArrows;
         border-bottom: 2px solid #000;
         border-right: 2px solid #000;
-        border-top: 2px solid #f4f4f4;
-        border-left: 2px solid #f4f4f4;
+        border-top: 2px solid transparent;
+        border-left: 2px solid transparent;
         @include sliderPrevArrowsPosition;
     }
     .rangeSliderCarousel .slick-prev.slick-disabled{
@@ -243,6 +240,11 @@
     .rangeSliderCarousel .slick-next.slick-disabled{
         border-top: 2px solid #c3c3c3;
         border-left: 2px solid #c3c3c3;
+    }
+}
+@media all and (min-width: 768px) and (max-width:1023px) {
+    .rangeSlider {
+        padding: 55px 0 80px 0;
     }
 }
 
@@ -315,6 +317,11 @@
     }
     .suppImageWrapper .suppContent {
         margin-top: 15px;
+    }
+}
+@media all and (min-width: 768px) and (max-width:1023px) {
+    .suppContentWrapper .suppMainTitle {
+        font-size: 50.29px !important;
     }
 }
 // Supplements You Can Trust Ends
@@ -586,6 +593,7 @@
 // Best Seller Slider Starts
 .bestSeller{
     padding: 55px 0 80px 0;
+    height: 649px;
 
     h2{
         color: #fff;
@@ -593,12 +601,14 @@
 
     &Slider {
         width: 100%;
+        margin-top: 39px;
 
         &ContentWrapper {
             width: 40%;
             display: table-cell;
             color: #fff;
-            vertical-align: middle;
+            vertical-align: top;
+            padding-top: 60px;
         }
         &ImageWrapper {
             display: table-cell;
@@ -629,6 +639,19 @@
     }
     &Tag {
         font-family: 'gilroy-light';
+    }
+
+}
+
+@media all and (max-width:767px) {
+    .bestSeller{display: none;}
+}
+@media all and (min-width: 768px) and (max-width:1023px) {
+    .bestSellerSliderImageWrapper img {
+        width: 400px;
+    }
+    .bestSellerSliderContentWrapper {
+        padding-top: 0;
     }
 }
 .customSlickDots {

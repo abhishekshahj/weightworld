@@ -154,8 +154,8 @@
   }
 }
 .rangeSlider {
-  background: #f4f4f4;
-  padding: 55px 0 80px 0;
+  background: #fff;
+  padding: 130px 0 80px 0;
 }
 .rangeSlider .rangeSliderMainInner {
   background-size: cover !important;
@@ -184,8 +184,8 @@
   background: transparent;
   border-top: 2px solid #000;
   border-left: 2px solid #000;
-  border-bottom: 2px solid #f4f4f4;
-  border-right: 2px solid #f4f4f4;
+  border-bottom: 2px solid transparent;
+  border-right: 2px solid transparent;
   transform: rotate(135deg);
 }
 .rangeSlider .rangeSliderCarousel .slick-prev {
@@ -201,8 +201,8 @@
   background: transparent;
   border-bottom: 2px solid #000;
   border-right: 2px solid #000;
-  border-top: 2px solid #f4f4f4;
-  border-left: 2px solid #f4f4f4;
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
   transform: rotate(135deg);
 }
 .rangeSlider .rangeSliderCarousel .slick-prev.slick-disabled {
@@ -214,6 +214,11 @@
   border-left: 2px solid #c3c3c3;
 }
 
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .rangeSlider {
+    padding: 55px 0 80px 0;
+  }
+}
 @media all and (max-width: 767px) {
   .rangeSlider {
     padding: 25px 0 40px 0;
@@ -284,6 +289,11 @@
 
   .suppImageWrapper .suppContent {
     margin-top: 15px;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .suppContentWrapper .suppMainTitle {
+    font-size: 50.29px !important;
   }
 }
 .customerImage {
@@ -526,18 +536,21 @@
 }
 .bestSeller {
   padding: 55px 0 80px 0;
+  height: 649px;
 }
 .bestSeller h2 {
   color: #fff;
 }
 .bestSellerSlider {
   width: 100%;
+  margin-top: 39px;
 }
 .bestSellerSliderContentWrapper {
   width: 40%;
   display: table-cell;
   color: #fff;
-  vertical-align: middle;
+  vertical-align: top;
+  padding-top: 60px;
 }
 .bestSellerSliderImageWrapper {
   display: table-cell;
@@ -568,6 +581,20 @@
   font-family: "gilroy-light";
 }
 
+@media all and (max-width: 767px) {
+  .bestSeller {
+    display: none;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .bestSellerSliderImageWrapper img {
+    width: 400px;
+  }
+
+  .bestSellerSliderContentWrapper {
+    padding-top: 0;
+  }
+}
 .customSlickDots {
   width: 100%;
   text-align: center;

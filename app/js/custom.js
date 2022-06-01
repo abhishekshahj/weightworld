@@ -226,5 +226,7 @@ $(document).ready(function(){
       });
   }
     // Latest Artical Slider Ends
+
+    $('.sliderImageTitle').sameHeight();
     
   });
