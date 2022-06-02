@@ -90,17 +90,27 @@
 @mixin sliderPrevArrowsPosition{
     transform: rotate(135deg);
 }
+.contentContainer{
+    font-family: 'gilroy-light';
+    font-size: 17.14px;
+}
 .fARightArrow {
     margin-left: 7px;
     font-size: 19px;
     position: absolute;
-    top: 17px;
+    top: 11px;
     right: 22px;
 }
 
 .newArrivalWrapper {
     background: #f4f4f4;
     padding: 55px 0 80px 0;
+
+    .btn{
+        color: #fff;
+        position: relative;
+        padding: 0.5rem 3rem 0.5rem 1rem;
+    }
 
     .newArrivalCard {
         margin: 0 10px;
@@ -114,15 +124,20 @@
         text-align: center;
         padding-top: 20px;
 
+        p{
+            font-size: 15px;
+            font-family: 'gilroy-regular';
+        }
+
         .sliderImageTitle {
             font-family: 'gilroy-medium';
-            font-size: 1.15rem;
+            font-size: 18.21px;
             margin-bottom: 15px;
         }
 
         .sliderImagePrice {
             font-family: "gilroy-bold";
-            font-size: 23px;
+            font-size: 22.54px;
             color: #1e53a0;
             margin-bottom: 16px;
         }
@@ -186,9 +201,9 @@
         padding: 8px 35px 8px 15px;
     }
     .fARightArrow {
-        top: 8px;
-        right: 14px;
-        font-size: 17px;
+        top: 9px;
+        right: 20px;
+        font-size: 20px;
     }
 }
 // New Arrivals Slider Ends
@@ -375,6 +390,10 @@
         color: #000;
         text-decoration: none;
     }
+    &SubText {
+        font-size: 15px;
+        font-family: 'gilroy-regular';
+    }
 
     &MainTitle{
         margin-bottom: 40px;
@@ -389,6 +408,8 @@
     }
     &Title{
         margin-top: 15px;
+        font-size: 21.43px;
+    font-family: 'gilroy-medium';
     }
 }
 
@@ -419,7 +440,7 @@
     
     &LeftSectionTitle{
         font-size: 21.43px;
-        font-family: 'gilroy-medium';
+        font-family: 'gilroy-semibold';
         margin-bottom: 25px;
     }
     &LeftSection {
@@ -441,6 +462,7 @@
         width: 52%;
         text-align: center;
         margin-top: 8px;
+        font-family: 'gilroy-semibold';
     }
     &SliderWrapper {
         background: #fafafc;
@@ -474,6 +496,19 @@
     &DetailName {
         font-size: 19.29px;
         font-family: 'gilroy-bold';
+        position: relative;
+
+        &::after {
+            content: "";
+            width: 13px;
+            height: 18px;
+            background: url(/images/verified-sign.png) no-repeat center;
+            position: absolute;
+            z-index: 1;
+            margin: auto;
+            top: 5px;
+            margin-left: 7px;
+        }
     }
     &DetailVerified {
         font-size: 12.86px;
@@ -630,6 +665,11 @@
         margin-top: 39px;
         z-index: 10;
 
+        &ItemText {
+            font-size: 17.14px;
+            font-family: 'gilroy-medium';
+        }
+
         &ContentWrapper {
             width: 40%;
             display: table-cell;
@@ -656,18 +696,28 @@
         &OldValueContainer {
             display: flex;
             flex-direction: column;
-            margin-top: 34px;
+            margin-top: 27px;
             border-left: 1px solid;
             padding-left: 15px;
         }
         &OldItemValue {
             text-decoration: line-through;
+            font-size: 23.57px;
+        font-family: 'gilroy-light';
+        }
+        &SaveText{
+            font-family: 'gilroy-regular';
+            font-size: 19.29px;
         }
     }
     &Tag {
         font-family: 'gilroy-light';
+        font-size: 34.29px;
     }
 
+}
+.bestSeller h2.bestSellerSliderImageText{
+    font-family: "gilroy-extrabold";
 }
 
 @media all and (max-width:767px) {
@@ -714,6 +764,8 @@
                 border: none;
                 color: #fff;
                 text-transform: uppercase;
+                font-size: 17.14px;
+                font-family: 'gilroy-light';
             }
         }
     }

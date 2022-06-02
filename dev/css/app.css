@@ -10285,7 +10285,7 @@ h3 {
   font-style: normal;
 }
 @font-face {
-  font-family: "gilroy-extrabol";
+  font-family: "gilroy-extrabold";
   src: url("../fonts/Gilroy-ExtraBold/gilroy-extrabold-webfont.eot");
   src: url("../fonts/Gilroy-ExtraBold/gilroy-extrabold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-ExtraBold/gilroy-extrabold-webfont.woff2") format("woff2"), url("../fonts/Gilroy-ExtraBold/gilroy-extrabold-webfont.woff") format("woff"), url("../fonts/Gilroy-ExtraBold/gilroy-extrabold-webfont.ttf") format("truetype"), url("../fonts/Gilroy-ExtraBold/gilroy-extrabold-webfont.svg#gilroy-extrabol") format("svg");
   font-weight: normal;
@@ -10759,12 +10759,61 @@ h3 {
 }
 
 @media only screen and (max-width: 767px) {
-  .hide {
+  .subscribe-wrap {
+    padding: 30px 0;
+    overflow: hidden;
+  }
+  .subscribe-wrap .leaf-1 {
+    background-size: cover;
+    height: 263px;
+    width: 190px;
+    top: 29px;
+    left: -33%;
+  }
+  .subscribe-wrap .leaf-2 {
     display: none;
   }
-
-  .show {
+  .subscribe-wrap .leaf-3 {
+    display: none;
+  }
+  .subscribe-wrap .leaf-4 {
+    height: 250px;
+    width: 150px;
+    right: -27%;
+    transform: rotate(-34deg);
+  }
+  .subscribe-block {
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    margin: 0 auto;
+    box-shadow: none;
+    position: relative;
+    z-index: 9;
+  }
+  .subscribe-block_form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 90%;
+    margin: 30px auto 10px auto;
+  }
+  .subscribe-block_form .btn {
+    font-size: 0;
+    height: 47px;
+    width: 47px;
+    padding: 0;
+  }
+  .subscribe-block_form .btn::before {
+    content: "";
     display: block;
+    width: 17px;
+    height: 17px;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    transform: rotate(135deg);
+    margin-left: 9px;
   }
 
   .footer-top_wrap {
