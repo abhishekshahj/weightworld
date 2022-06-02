@@ -353,7 +353,7 @@
     }
 }
 @media all and (max-width: 1200px) {
-    h2{
+    .customerImage h2{
         font-size: 24.575px !important;
         margin-bottom: 40px !important;
     }
@@ -640,7 +640,7 @@
             display: table-cell;
 
             img{
-                margin: 0 auto;
+                float: right;
             }
         }
         &ItemValue {
@@ -680,7 +680,9 @@
         }
         &Slider{
             &ImageWrapper img {
-                width: 400px;
+                width: 185px;
+                float: none;
+                margin: 0 auto;
             }
             &ContentWrapper {
                 padding-top: 0;
