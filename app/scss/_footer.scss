@@ -386,3 +386,16 @@
     }
   }
 }
+
+@media all and (min-width: 768px) and (max-width:1023px) {
+  .subscribe{
+    &-wrap{
+      & .leaf-4 {
+        right: 1%;
+      }
+      & .leaf-1 {
+          left: 0;
+      }
+    }
+  }
+}

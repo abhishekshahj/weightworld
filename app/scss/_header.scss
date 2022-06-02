@@ -1,5 +1,20 @@
+.nav{
+    &-item{
+        &-link.dropdown-toggle{
+            color: #000 !important;
+            font-family: "gilroy-semibold";
+            font-size: 13.93px;
+        }
+        &-link{
+            font-family: "gilroy-semibold";
+            font-size: 13.93px;
+            color: #545454 !important;
+        }
+    }
+}
+
 .topHeader {
-    padding: 35px 80px 35px 60px;
+    padding: 35px 24px 35px 60px;
 }
 .dropdown-toggle::after {
     border-color: #fff;
@@ -9,6 +24,14 @@
     border-radius: 20px;
     height: 44px;
     font-size: 15px;
+    font-family: 'gilroy-light';
+}
+.topHeader form{
+    position: relative;
+}
+.searchIcon {
+    position: absolute;
+    right: 24px;
 }
 .cartIcon{
     margin-left: 20px;
