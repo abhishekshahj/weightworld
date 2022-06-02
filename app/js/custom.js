@@ -1,4 +1,37 @@
 $(document).ready(function(){
+  $('.footer-middle_menuWrap h6').on("click",function() {
+    if($(this).next().hasClass('hide')){
+      $(this).next().removeClass('hide')
+      $(this).next().addClass('show')
+    }
+    else{
+      $(this).next().addClass('hide')
+      $(this).next().removeClass('show')
+    }
+  });
+});
+$(document).ready(function(){
+
+  // $('.footer-middle_menuWrap h6').on("click",function() {
+      
+  //   $this = $j(this);
+    
+  //   if ($this.next().hasClass('show')) {
+  //     $this.next().removeClass('show');
+  //     $this.next().addClass('hide');
+      
+  //   } else {
+  //     $this.next().removeClass('hide');
+  //     $this.next().addClass('show');
+  //   }
+  // });
+
+  $("footer-middle_menuWrap h6").on("click",function(){
+    if($(".footer-middle_menuWrap ul").hasClass("hide")){
+      $(".footer-middle_menuWrap ul").removeClass("hide");
+      $(".footer-middle_menuWrap ul").addClass("show");
+    }
+  });
 
   // Best Seller Slider Starts
   if ($('.bestSellerSliderContainer').length) {

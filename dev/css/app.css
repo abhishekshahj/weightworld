@@ -10738,6 +10738,14 @@ h3 {
 }
 
 @media only screen and (max-width: 767px) {
+  .hide {
+    display: none;
+  }
+
+  .show {
+    display: block;
+  }
+
   .footer-top_wrap {
     margin-bottom: 20px;
   }
@@ -10758,7 +10766,6 @@ h3 {
   }
   .footer-middle_menuWrap {
     border-bottom: 1px solid #d7d6d6;
-    padding: 0;
   }
   .footer-middle_menuWrap h6 {
     margin-bottom: 0;
@@ -10786,9 +10793,6 @@ h3 {
   }
   .footer-middle_menuWrap.active::after {
     transform: rotate(0deg);
-  }
-  .footer-middle_menu {
-    display: none;
   }
   .footer-bottom .row {
     flex-flow: column-reverse;
