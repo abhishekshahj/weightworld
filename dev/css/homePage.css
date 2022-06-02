@@ -537,6 +537,25 @@
 .bestSeller {
   padding: 55px 0 80px 0;
   height: 649px;
+  position: relative;
+  pointer-events: auto !important;
+  transition: all 0.8s;
+}
+.bestSellerContainer {
+  position: relative !important;
+}
+.bestSellerLeaf {
+  position: absolute;
+  background-image: url(../images/best-seller-leaf.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 626px;
+  width: 973px;
+  top: 64px !important;
+  left: auto !important;
+  right: 12%;
+  z-index: -2;
+  filter: blur(3px);
 }
 .bestSeller h2 {
   color: #fff;
@@ -544,6 +563,7 @@
 .bestSellerSlider {
   width: 100%;
   margin-top: 39px;
+  z-index: 10;
 }
 .bestSellerSliderContentWrapper {
   width: 40%;
@@ -587,10 +607,12 @@
   }
 }
 @media all and (min-width: 768px) and (max-width: 1023px) {
+  .bestSellerLeaf {
+    display: none !important;
+  }
   .bestSellerSliderImageWrapper img {
     width: 400px;
   }
-
   .bestSellerSliderContentWrapper {
     padding-top: 0;
   }
@@ -599,6 +621,7 @@
   width: 100%;
   text-align: center;
   margin-top: 27px;
+  z-index: 11;
 }
 .customSlickDots ul {
   list-style-type: none;

@@ -217,7 +217,7 @@
     <!-- New Arrivals Slider Ends -->
 
     <!-- Best Seller Slider Starts -->
-    <section class="bestSeller greenBackground">
+    <section class="bestSeller greenBackground" id="best-seller-leaf" data-pointer-events="true" data-hover-only="true">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -228,9 +228,9 @@
         </div>
       </div>
 
-      <div class="container">
+      <div class="container bestSellerContainer">
         <div class="row">
-          <div class="customSlickDots"></div>
+          <div class="customSlickDots" data-pointer-events="true"></div>
           <div id='bestSellerSlider' class='bestSellerSlider'>
             <div class="bestSellerSliderContainer">
               <div class="bestSellerSliderInnerContainer">
@@ -350,7 +350,8 @@
         </div>
       </div>
 
-
+      <div class="bestSellerLeaf" data-depth="0.2" data-pointer-events="true">
+      </div>
     </section>
     <!-- Best Seller Slider Ends -->
 
@@ -558,7 +559,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-4 col-lg-2">
+          <div class="col-md-4 col-lg-2 col-sm-4">
             <div class="suppImageWrapper">
               <div class="suppImage"
                 style="background: url(/images/supplements-you-can-trust/supplements-you-can-trust-1.png) no-repeat center;">
@@ -568,7 +569,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 col-lg-2">
+          <div class="col-md-4 col-lg-2 col-sm-4">
             <div class="suppImageWrapper">
               <div class="suppImage"
                 style="background: url(/images/supplements-you-can-trust/supplements-you-can-trust-2.png) no-repeat center;">
@@ -578,7 +579,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 col-lg-2">
+          <div class="col-md-4 col-lg-2 col-sm-4">
             <div class="suppImageWrapper">
               <div class="suppImage"
                 style="background: url(/images/supplements-you-can-trust/supplements-you-can-trust-3.png) no-repeat center;">
@@ -588,7 +589,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 col-lg-2">
+          <div class="col-md-4 col-lg-2 col-sm-4">
             <div class="suppImageWrapper">
               <div class="suppImage"
                 style="background: url(/images/supplements-you-can-trust/supplements-you-can-trust-4.png) no-repeat center;">
@@ -598,7 +599,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 col-lg-2">
+          <div class="col-md-4 col-lg-2 col-sm-4">
             <div class="suppImageWrapper">
               <div class="suppImage"
                 style="background: url(/images/supplements-you-can-trust/supplements-you-can-trust-5.png) no-repeat center;">
@@ -608,7 +609,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 col-lg-2">
+          <div class="col-md-4 col-lg-2 col-sm-4">
             <div class="suppImageWrapper">
               <div class="suppImage"
                 style="background: url(/images/supplements-you-can-trust/supplements-you-can-trust-6.png) no-repeat center;">
@@ -829,6 +830,7 @@
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script type="text/javascript" src="https://pro.fontawesome.com/releases/v5.6.1/js/all.js"></script>
   <script src="js/jquery.sameheight.js"></script>
+  <script src="js/parallax.min.js"></script>
 
   <!-- Custom JS -->
   <script src="js/custom.js"></script>

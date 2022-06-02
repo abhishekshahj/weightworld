@@ -1,37 +1,66 @@
 $(document).ready(function(){
-  $('.footer-middle_menuWrap h6').on("click",function() {
-    if($(this).next().hasClass('hide')){
-      $(this).next().removeClass('hide')
-      $(this).next().addClass('show')
-    }
-    else{
-      $(this).next().addClass('hide')
-      $(this).next().removeClass('show')
-    }
-  });
-});
-$(document).ready(function(){
 
-  // $('.footer-middle_menuWrap h6').on("click",function() {
-      
-  //   $this = $j(this);
+  // Best Seller Leaf Effect Starts
+  $(function(){
+    var scene = document.getElementById('best-seller-leaf');
+    var parallaxInstance = new Parallax(scene, {
+      relativeInput: true
     
-  //   if ($this.next().hasClass('show')) {
-  //     $this.next().removeClass('show');
-  //     $this.next().addClass('hide');
-      
-  //   } else {
-  //     $this.next().removeClass('hide');
-  //     $this.next().addClass('show');
-  //   }
-  // });
+    });
+    });
+  // Best Seller Leaf Effect Ends
 
-  $("footer-middle_menuWrap h6").on("click",function(){
-    if($(".footer-middle_menuWrap ul").hasClass("hide")){
-      $(".footer-middle_menuWrap ul").removeClass("hide");
-      $(".footer-middle_menuWrap ul").addClass("show");
-    }
-  });
+  // Footer Links OnClick Menu Open Starts
+      
+    $("body").click(function (e) {
+      if ($(e.target).parents("#countryCombo").length || e.target.id == "countryCombo") {
+        $(".countyList").slideToggle();
+        $(".sel-lang").toggleClass("open");
+      } else {
+        $(".countyList").slideUp();
+        $(".sel-lang").removeClass("open");
+      }
+    });
+
+    $('#all_county_list li').click(function () {
+      var selectedId = $(this).attr('id');
+      console.log(selectedId);
+      if (selectedId != 're_en') {
+        $('#re_en').css("display", "block");
+      } else {
+        $('#re_en').css("display", "none");
+      }
+      var selectedVal = $(this).html();
+      if (selectedVal != '') {
+        /* $('#countryCombo_change').css("display", "block");
+        $('#countryCombo').css("display", "none");*/
+        $('#countryCombo').html(selectedVal);
+      }
+    });
+
+  if ($(window).width() < 767) {
+
+    var selector = ".footer-middle_menuWrap";
+    $(selector).click(function (e) {
+      if ($(this).hasClass("active")) {
+        $(selector).removeClass("active");
+        $(this).removeClass("active");
+      } else {
+        $(selector).removeClass("active");
+        $(this).addClass("active");
+      }
+    });
+
+    var socialMedia = $(".footer-middle_socialList");
+
+    $(socialMedia).remove();
+
+    $('.mobilesocialMedia').html(socialMedia);
+
+    console.log(socialMedia);
+
+  }
+  // Footer Links OnClick Menu Open Starts
 
   // Best Seller Slider Starts
   if ($('.bestSellerSliderContainer').length) {
@@ -62,6 +91,21 @@ $(document).ready(function(){
           dots: true,
           appendDots: $(".customSlickDots")
         });
+
+        colorSettings = {
+          section: ['#84ac89', '#beb068','#b068be', '#6876be']
+        },
+        changeColors = function (slide) {
+            $(".bestSeller").css({backgroundColor: colorSettings.section[slide]});
+        };
+        
+        // Initial call to set color
+        changeColors(0);
+            
+        $(".bestSellerSliderContainer").on('beforeChange', function(event, slick, currentSlide, nextSlide){
+          changeColors(nextSlide);
+        });
+
         
       }
     });

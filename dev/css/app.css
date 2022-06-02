@@ -10428,7 +10428,7 @@ h3 {
   margin-top: -2px;
 }
 
-@media all and (max-width: 767px) {
+@media all and (max-width: 1023px) {
   .searchBar {
     width: 100% !important;
   }
@@ -10793,6 +10793,9 @@ h3 {
   }
   .footer-middle_menuWrap.active::after {
     transform: rotate(0deg);
+  }
+  .footer-middle_menu {
+    display: none;
   }
   .footer-bottom .row {
     flex-flow: column-reverse;
