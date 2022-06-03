@@ -1,13 +1,21 @@
 $(document).ready(function(){
 
   // Best Seller Leaf Effect Starts
-  $(function(){
-    var scene = document.getElementById('best-seller-leaf');
-    var parallaxInstance = new Parallax(scene, {
-      relativeInput: true
-    
-    });
-    });
+
+  $(window).resize(function() {
+    if ($(window).width() > 767) {
+      $(function(){
+        var scene = document.getElementById('best-seller-leaf');
+        var leaf = document.getElementById('subscribe-wrap');
+        var parallaxInstance = new Parallax(scene, {
+          relativeInput: true
+        });
+        var leafParallaxInstance = new Parallax(leaf, {
+          relativeInput: true
+        });
+      });  
+    }
+  });
   // Best Seller Leaf Effect Ends
 
   // Footer Links OnClick Menu Open Starts
@@ -88,6 +96,8 @@ $(document).ready(function(){
           slidesToScroll: 1,
           arrows: false,
           focusOnSelect: true,
+          // fade: true,
+          // speed: 2000,
           dots: true,
           appendDots: $(".customSlickDots")
         });
@@ -293,30 +303,55 @@ $(document).ready(function(){
     // Supplements You Can Trust Ends
 
     // Latest Artical Slider Starts
-    if ($(window).width() < 575) {
       $('.latestArticalCarousel').slick({
         variableWidth: true,
         slidesToShow: 2,
         slidesToScroll: 1,
         infinite: true,
-        arrows: false,
+        arrows: false
       });
-  }
     // Latest Artical Slider Ends
 
+    // Equal Height Plugin Starts
+  
     $('.sliderImageTitle').sameHeight();
 
-    // New Arrivals Slider Starts
+    // Equal Height Plugin Starts
 
-    $('.bestSellerMobileCarousel').slick({
+    // Footer Carousel Starts
+    
+    $('.footer-top-mobi_slider').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      infinite: false,
+      arrows: false
+    });
+
+    // Footer Carousel Ends
+
+    // Supp Mobile Slider Starts
+
+    $('.suppMobiSlider').slick({
+      variableWidth: false,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      infinite: false,
+      arrows: false
+    });
+
+    // Supp Mobile Slider Starts   
+
+    // Best Seller Mobile Slider Starts   
+    
+    $('.best-seller-mobile-slider').slick({
       variableWidth: true,
       slidesToShow: 1,
       slidesToScroll: 1,
-      arrows: false,
-      infinite: true
+      infinite: false,
+      arrows: false
     });
-    
-    // New Arrivals Slider Ends
+
+    // Best Seller Mobile Slider Ends
     
   });
   

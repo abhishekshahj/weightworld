@@ -10359,6 +10359,9 @@ h3 {
   font-size: 13.93px;
   color: #545454 !important;
 }
+.navbar-mobi-header {
+  display: none;
+}
 
 .topHeader {
   padding: 35px 24px 35px 60px;
@@ -10464,6 +10467,17 @@ h3 {
     color: #000;
     border-color: transparent;
   }
+
+  .navbar-mobi-header {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 28px;
+  }
+  .navbar-mobi-header .searchIcon {
+    position: initial;
+    right: auto;
+  }
 }
 .subscribe-wrap {
   background: #f8f8f8;
@@ -10471,7 +10485,7 @@ h3 {
   position: relative;
 }
 .subscribe-wrap .leaf {
-  position: absolute;
+  position: absolute !important;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -10480,7 +10494,7 @@ h3 {
   height: 263px;
   width: 190px;
   top: 0;
-  left: 22%;
+  left: 22% !important;
   z-index: 10;
 }
 .subscribe-wrap .leaf-2 {
@@ -10488,14 +10502,16 @@ h3 {
   height: 100px;
   width: 100px;
   bottom: 8%;
-  left: 14%;
+  left: 14% !important;
+  top: auto !important;
 }
 .subscribe-wrap .leaf-3 {
   background-image: url("../images/subscribeLeaf-3.png");
   height: 100px;
   width: 100px;
-  right: 24%;
-  top: 11%;
+  right: 23.5%;
+  top: 11% !important;
+  left: auto !important;
 }
 .subscribe-wrap .leaf-4 {
   background-image: url("../images/subscribeLeaf-4.png");
@@ -10505,6 +10521,8 @@ h3 {
   bottom: 0;
   display: block;
   z-index: 10;
+  left: auto !important;
+  top: auto !important;
 }
 .subscribe-block {
   background: #fff;
@@ -10549,6 +10567,9 @@ h3 {
 .footer {
   background: #f4f4f4;
   padding: 50px 0 20px 0;
+}
+.footer-top-mobi {
+  display: none;
 }
 .footer-top_iconBlock {
   text-align: center;
@@ -10767,20 +10788,20 @@ h3 {
     background-size: cover;
     height: 263px;
     width: 190px;
-    top: 29px;
-    left: -33%;
+    top: 29px !important;
+    left: -145px !important;
   }
   .subscribe-wrap .leaf-2 {
-    display: none;
+    display: none !important;
   }
   .subscribe-wrap .leaf-3 {
-    display: none;
+    display: none !important;
   }
   .subscribe-wrap .leaf-4 {
     height: 250px;
     width: 150px;
-    right: -27%;
-    transform: rotate(-34deg);
+    right: -134px !important;
+    transform: rotate(-34deg) !important;
   }
   .subscribe-block {
     background: transparent;
@@ -10816,8 +10837,32 @@ h3 {
     margin-left: 9px;
   }
 
+  .footer-top {
+    display: none;
+  }
   .footer-top_wrap {
     margin-bottom: 20px;
+  }
+  .footer-top_image {
+    float: left;
+    margin-right: 30px;
+  }
+  .footer-top_content {
+    text-align: left;
+    float: left;
+    margin-top: 7px;
+  }
+  .footer-top_iconBlock {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .footer-top-mobi_slider {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #d7d6d6;
+    margin-bottom: 20px;
+  }
+  .footer-top-mobi {
+    display: block;
   }
   .footer-middle_textBlockWrap {
     width: 100%;
@@ -10882,9 +10927,12 @@ h3 {
 }
 @media all and (min-width: 768px) and (max-width: 1023px) {
   .subscribe-wrap .leaf-4 {
-    right: 1%;
+    right: 1% !important;
   }
   .subscribe-wrap .leaf-1 {
-    left: 0;
+    left: 0 !important;
+  }
+  .subscribe-wrap .leaf-3 {
+    left: 84% !important;
   }
 }

@@ -4,13 +4,13 @@
     padding: 100px 0;
     position: relative;
     .leaf {
-      position: absolute;
+      position: absolute !important;
       &-1 {
         background-image: url("../images/subscribeLeaf-1.png");
         height: 263px;
         width: 190px;
         top: 0;
-        left: 22%;
+        left: 22% !important;
         z-index: 10;
       }
       &-2 {
@@ -18,14 +18,16 @@
         height: 100px;
         width: 100px;
         bottom: 8%;
-        left: 14%;
+        left: 14% !important;
+        top: auto !important;
       }
       &-3 {
         background-image: url("../images/subscribeLeaf-3.png");
         height: 100px;
         width: 100px;
-        right: 24%;
-        top: 11%;
+        right: 23.5%;
+        top: 11% !important;
+        left: auto !important;
       }
       &-4 {
         background-image: url("../images/subscribeLeaf-4.png");
@@ -35,6 +37,8 @@
         bottom: 0;
         display: block;
         z-index: 10;
+        left: auto !important;
+        top: auto !important;
       }
       background-size: cover;
       background-repeat: no-repeat;
@@ -88,6 +92,9 @@
   padding: 50px 0 20px 0;
 
   &-top {
+    &-mobi {
+      display: none;
+  }
     &_iconBlock {
       text-align: center;
       h6 {
@@ -317,20 +324,20 @@
           background-size: cover;
           height: 263px;
           width: 190px;
-          top: 29px;
-          left: -33%;
+          top: 29px !important;
+          left: -145px !important;
       }
         &-2{
-          display: none;
+          display: none !important;
         }
         &-3{
-          display: none;
+          display: none !important;
         }
         &-4{
             height: 250px;
             width: 150px;
-            right: -27%;
-            transform: rotate(-34deg);
+            right: -134px !important;
+            transform: rotate(-34deg) !important;
         }
       }
   }
@@ -373,10 +380,32 @@
   }
   .footer {
     &-top{
+      display: none;
       &_wrap{
         margin-bottom: 20px;
       }
+      &_image{
+        float: left;
+        margin-right: 30px;
+      }
+      &_content{
+        text-align: left;
+        float: left;
+        margin-top: 7px;
+      }
+      &_iconBlock {
+        padding-right: 15px;
+        padding-left: 15px;
     }
+    &-mobi_slider {
+      padding-bottom: 30px;
+      border-bottom: 1px solid #d7d6d6;
+      margin-bottom: 20px;
+  }
+    &-mobi {
+      display: block;
+  }
+}
     &-middle {
       &_textBlockWrap {
         width: 100%;
@@ -453,10 +482,13 @@
   .subscribe{
     &-wrap{
       & .leaf-4 {
-        right: 1%;
+        right: 1% !important;
       }
       & .leaf-1 {
-          left: 0;
+          left: 0 !important;
+      }
+      & .leaf-3 {
+          left: 84% !important;
       }
     }
   }

@@ -34,6 +34,10 @@
     </section>
 
     <nav class="navbar navbar-expand-lg navbar-light topHeader">
+    <div class="navbar-mobi-header">
+        <span class="searchIcon"><img src="../images/search-icon.png" /></span>
+        <span class="cartIcon"><img src="/images/cart-icon.png" alt="Cart Icon" /></span>
+    </div>
     <a class="navbar-brand" href="/"><img src="/images/weightworld-logo.png" /></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -180,9 +184,6 @@
         <div class="row">
           <div class="col-md-12">
             <div class="trustpilotBeltWrapper">
-              <!-- <div class="trustpilotBeltLogo">
-                
-              </div> -->
               <span class="trustpilotBeltLogo"><img src="/images/trustpilot-logo.png" alt="Trustpilot Logo" /></span>
               <span class="trustpilotBeltText">Rated
                 <span class="dark">outstanding</span> based on <span class="dark">486+ Reviews</span>
@@ -196,22 +197,19 @@
 
     <!-- New Arrivals Slider Starts -->
     <section class="newArrivalWrapper">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="text-center">
-              <h2><span class="light">Shop our</span> New Arrivals</h2>
-              <p class="contentContainer">
-                Find what you're looking for in our specially curated collections.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div id="newArrivalSlider" class="newArrivalSlider">
         <div class="newArrivalsSliderContainer">
           <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="text-center">
+                  <h2><span class="light">Shop our</span> New Arrivals</h2>
+                  <p class="contentContainer">
+                    Find what you're looking for in our specially curated collections.
+                  </p>
+                </div>
+              </div>
+            </div>
             <div class="row carousel">
               <div class="newArrivalCard">
                 <div class="newSliderMainInner" style="
@@ -315,17 +313,14 @@
 
     <!-- Best Seller Slider Starts -->
     <section class="bestSeller greenBackground" id="best-seller-leaf" data-pointer-events="true" data-hover-only="true">
-      <div class="container">
+      <div class="container bestSellerContainer">
         <div class="row">
           <div class="col-md-12">
             <div class="text-center">
-              <h2><span class="light">Shop our </span> Shop our</h2>
+              <h2><span class="light">Shop our </span> Best Seller</h2>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="container bestSellerContainer">
         <div class="row">
           <div class="customSlickDots" data-pointer-events="true"></div>
           <div id='bestSellerSlider' class='bestSellerSlider'>
@@ -342,7 +337,7 @@
                       maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur
                     </p>
                     <span class="bestSellerSliderItemValue">
-                      £12.99
+                      £14.99
                     </span>
                     <span class="bestSellerSliderOldValueContainer">
                       <span class="bestSellerSliderOldItemValue">
@@ -370,7 +365,7 @@
                       maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur
                     </p>
                     <span class="bestSellerSliderItemValue">
-                      £12.99
+                      £15.99
                     </span>
                     <span class="bestSellerSliderOldValueContainer">
                       <span class="bestSellerSliderOldItemValue">
@@ -398,7 +393,7 @@
                       maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur
                     </p>
                     <span class="bestSellerSliderItemValue">
-                      £12.99
+                      £18.99
                     </span>
                     <span class="bestSellerSliderOldValueContainer">
                       <span class="bestSellerSliderOldItemValue">
@@ -426,7 +421,7 @@
                       maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur
                     </p>
                     <span class="bestSellerSliderItemValue">
-                      £12.99
+                      £19.99
                     </span>
                     <span class="bestSellerSliderOldValueContainer">
                       <span class="bestSellerSliderOldItemValue">
@@ -455,20 +450,18 @@
 
     <!-- Shop By Range Starts -->
     <section class="rangeSlider">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="text-center">
-              <h2><span class="light">Shop by</span> Range</h2>
-              <p class="contentContainer">
-                Find what you're looking for in our specially curated collections.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
       <div class="rangeSliderContainer">
         <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="text-center">
+                <h2><span class="light">Shop by</span> Range</h2>
+                <p class="contentContainer">
+                  Find what you're looking for in our specially curated collections.
+                </p>
+              </div>
+            </div>
+          </div>
           <div class="row rangeSliderCarousel">
             <div class="rangeSliderCard">
               <div class="rangeSliderMainInner" style="
@@ -523,6 +516,95 @@
       </div>
     </section>
     <!-- Shop By Range Ends -->
+
+    <!-- Best Seller Mobile Slider Starts -->
+    <section class="best-seller-mobile">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="text-center">
+              <h2><span class="light">Shop our</span> Best Seller</h2>
+              <p class="contentContainer">
+                Find what you're looking for in our specially curated collections.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row best-seller-mobile-slider">
+          <div class="best-seller-container">
+            <div class="best-seller-image" style="
+                  background: url(/images/new-arrivals/gummies-1.jpg) no-repeat center;
+                "></div>
+            <div class="best-seller-content-container">
+              <div class="best-seller-title">5-HTP Gummies</div>
+              <p class="best-seller-content">Are you struggling to clear your
+                mind before bed?</p>
+              <div class="best-seller-price">£13.99</div>
+              <button class="btn btn-darkGreen btn-lg">View Product <span class="fARightArrow"><i
+                    class="fal fa-long-arrow-right"></i></span>
+              </button>
+            </div>
+          </div>
+          <div class="best-seller-container">
+            <div class="best-seller-image" style="
+                  background: url(/images/new-arrivals/gummies-1.jpg) no-repeat center;
+                "></div>
+            <div class="best-seller-content-container">
+              <div class="best-seller-title">5-HTP Gummies</div>
+              <p class="best-seller-content">Are you struggling to clear your
+                mind before bed?</p>
+              <div class="best-seller-price">£13.99</div>
+              <button class="btn btn-darkGreen btn-lg">View Product <span class="fARightArrow"><i
+                    class="fal fa-long-arrow-right"></i></span>
+              </button>
+            </div>
+          </div>
+          <div class="best-seller-container">
+            <div class="best-seller-image" style="
+                  background: url(/images/new-arrivals/gummies-1.jpg) no-repeat center;
+                "></div>
+            <div class="best-seller-content-container">
+              <div class="best-seller-title">5-HTP Gummies</div>
+              <p class="best-seller-content">Are you struggling to clear your
+                mind before bed?</p>
+              <div class="best-seller-price">£13.99</div>
+              <button class="btn btn-darkGreen btn-lg">View Product <span class="fARightArrow"><i
+                    class="fal fa-long-arrow-right"></i></span>
+              </button>
+            </div>
+          </div>
+          <div class="best-seller-container">
+            <div class="best-seller-image" style="
+                  background: url(/images/new-arrivals/gummies-1.jpg) no-repeat center;
+                "></div>
+            <div class="best-seller-content-container">
+              <div class="best-seller-title">5-HTP Gummies</div>
+              <p class="best-seller-content">Are you struggling to clear your
+                mind before bed?</p>
+              <div class="best-seller-price">£13.99</div>
+              <button class="btn btn-darkGreen btn-lg">View Product <span class="fARightArrow"><i
+                    class="fal fa-long-arrow-right"></i></span>
+              </button>
+            </div>
+          </div>
+          <div class="best-seller-container">
+            <div class="best-seller-image" style="
+                  background: url(/images/new-arrivals/gummies-1.jpg) no-repeat center;
+                "></div>
+            <div class="best-seller-content-container">
+              <div class="best-seller-title">5-HTP Gummies</div>
+              <p class="best-seller-content">Are you struggling to clear your
+                mind before bed?</p>
+              <div class="best-seller-price">£13.99</div>
+              <button class="btn btn-darkGreen btn-lg">View Product <span class="fARightArrow"><i
+                    class="fal fa-long-arrow-right"></i></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Best Seller Mobile Slider Starts -->
 
     <!-- Customer Review Starts -->
     <section class="customerReview">
@@ -652,70 +734,120 @@
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
                 gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. sed do eiusmod tempor incididunt
                 ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. </p>
-
+            </div>
+          </div>
+          <div class="suppDevice">
+            <div class="col-md-4 col-lg-2 col-sm-4">
+              <div class="suppImageWrapper">
+                <div class="suppImage"
+                  style="background: url(/images/supplements-you-can-trust/supplements-you-can-trust-1.png) no-repeat center;">
+                </div>
+                <div class="suppContent">
+                  Manufacturing To GMP Standard
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-lg-2 col-sm-4">
+              <div class="suppImageWrapper">
+                <div class="suppImage"
+                  style="background: url(/images/supplements-you-can-trust/supplements-you-can-trust-2.png) no-repeat center;">
+                </div>
+                <div class="suppContent">
+                  Manufacturing To GMP Standard
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-lg-2 col-sm-4">
+              <div class="suppImageWrapper">
+                <div class="suppImage"
+                  style="background: url(/images/supplements-you-can-trust/supplements-you-can-trust-3.png) no-repeat center;">
+                </div>
+                <div class="suppContent">
+                  Manufacturing To GMP Standard
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-lg-2 col-sm-4">
+              <div class="suppImageWrapper">
+                <div class="suppImage"
+                  style="background: url(/images/supplements-you-can-trust/supplements-you-can-trust-4.png) no-repeat center;">
+                </div>
+                <div class="suppContent">
+                  Manufacturing To GMP Standard
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-lg-2 col-sm-4">
+              <div class="suppImageWrapper">
+                <div class="suppImage"
+                  style="background: url(/images/supplements-you-can-trust/supplements-you-can-trust-5.png) no-repeat center;">
+                </div>
+                <div class="suppContent">
+                  Manufacturing To GMP Standard
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-lg-2 col-sm-4">
+              <div class="suppImageWrapper">
+                <div class="suppImage"
+                  style="background: url(/images/supplements-you-can-trust/supplements-you-can-trust-6.png) no-repeat center;">
+                </div>
+                <div class="suppContent">
+                  Manufacturing To GMP Standard
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-4 col-lg-2 col-sm-4">
-            <div class="suppImageWrapper">
-              <div class="suppImage"
-                style="background: url(/images/supplements-you-can-trust/supplements-you-can-trust-1.png) no-repeat center;">
-              </div>
-              <div class="suppContent">
-                Manufacturing To GMP Standard
-              </div>
-            </div>
+      </div>
+
+      <div class="suppMobi suppMobiSlider">
+        <div class="suppImageWrapper">
+          <div class="suppImage"
+            style="background: url(/images/supplements-you-can-trust/supplements-you-can-trust-1.png) no-repeat center;">
           </div>
-          <div class="col-md-4 col-lg-2 col-sm-4">
-            <div class="suppImageWrapper">
-              <div class="suppImage"
-                style="background: url(/images/supplements-you-can-trust/supplements-you-can-trust-2.png) no-repeat center;">
-              </div>
-              <div class="suppContent">
-                Manufacturing To GMP Standard
-              </div>
-            </div>
+          <div class="suppContent">
+            Manufacturing To GMP Standard
           </div>
-          <div class="col-md-4 col-lg-2 col-sm-4">
-            <div class="suppImageWrapper">
-              <div class="suppImage"
-                style="background: url(/images/supplements-you-can-trust/supplements-you-can-trust-3.png) no-repeat center;">
-              </div>
-              <div class="suppContent">
-                Manufacturing To GMP Standard
-              </div>
-            </div>
+        </div>
+        <div class="suppImageWrapper">
+          <div class="suppImage"
+            style="background: url(/images/supplements-you-can-trust/supplements-you-can-trust-2.png) no-repeat center;">
           </div>
-          <div class="col-md-4 col-lg-2 col-sm-4">
-            <div class="suppImageWrapper">
-              <div class="suppImage"
-                style="background: url(/images/supplements-you-can-trust/supplements-you-can-trust-4.png) no-repeat center;">
-              </div>
-              <div class="suppContent">
-                Manufacturing To GMP Standard
-              </div>
-            </div>
+          <div class="suppContent">
+            Manufacturing To GMP Standard
           </div>
-          <div class="col-md-4 col-lg-2 col-sm-4">
-            <div class="suppImageWrapper">
-              <div class="suppImage"
-                style="background: url(/images/supplements-you-can-trust/supplements-you-can-trust-5.png) no-repeat center;">
-              </div>
-              <div class="suppContent">
-                Manufacturing To GMP Standard
-              </div>
-            </div>
+        </div>
+        <div class="suppImageWrapper">
+          <div class="suppImage"
+            style="background: url(/images/supplements-you-can-trust/supplements-you-can-trust-3.png) no-repeat center;">
           </div>
-          <div class="col-md-4 col-lg-2 col-sm-4">
-            <div class="suppImageWrapper">
-              <div class="suppImage"
-                style="background: url(/images/supplements-you-can-trust/supplements-you-can-trust-6.png) no-repeat center;">
-              </div>
-              <div class="suppContent">
-                Manufacturing To GMP Standard
-              </div>
-            </div>
+          <div class="suppContent">
+            Manufacturing To GMP Standard
+          </div>
+        </div>
+        <div class="suppImageWrapper">
+          <div class="suppImage"
+            style="background: url(/images/supplements-you-can-trust/supplements-you-can-trust-4.png) no-repeat center;">
+          </div>
+          <div class="suppContent">
+            Manufacturing To GMP Standard
+          </div>
+        </div>
+        <div class="suppImageWrapper">
+          <div class="suppImage"
+            style="background: url(/images/supplements-you-can-trust/supplements-you-can-trust-5.png) no-repeat center;">
+          </div>
+          <div class="suppContent">
+            Manufacturing To GMP Standard
+          </div>
+        </div>
+        <div class="suppImageWrapper">
+          <div class="suppImage"
+            style="background: url(/images/supplements-you-can-trust/supplements-you-can-trust-6.png) no-repeat center;">
+          </div>
+          <div class="suppContent">
+            Manufacturing To GMP Standard
           </div>
         </div>
       </div>
@@ -796,19 +928,16 @@
 
     <!-- Latest Artical Starts -->
     <section class="latestArtical">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="latestArticalMainTitle text-center">
-              <h2><span class="light">Read our</span> Latest Articals</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="latestArticalSliderContainer d-block d-sm-none">
+      <div class="latestArticalSliderContainer">
         <div class="container">
-          <div class="row latestArticalCarousel">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="latestArticalMainTitle text-center">
+                <h2><span class="light">Read our</span> Latest Articals</h2>
+              </div>
+            </div>
+          </div>
+          <div class="latestArticalCarousel">
             <div class="latestArticalContentWrapper">
               <a href="#">
                 <div class="latestArticalImageWrapper"
@@ -857,7 +986,7 @@
         </div>
       </div>
 
-      <div class="container d-none d-sm-block">
+      <div class="container latestArticalContainer">
         <div class="row">
           <div class="col-md-6 col-lg-3 col-sm-6">
             <div class="latestArticalContentWrapper">
@@ -916,7 +1045,7 @@
     </section>
     <!-- Latest Artical Ends -->
 
-    <section class="subscribe-wrap">
+    <section class="subscribe-wrap" id="subscribe-wrap" data-pointer-events="true" data-hover-only="true">
 
     <div class="container">
         <div class="row justify-content-center align-items-center">
@@ -945,10 +1074,10 @@
             </div>
         </div>
     </div>
-    <div class="leaf leaf-1"></div>
-    <div class="leaf leaf-2"></div>
-    <div class="leaf leaf-3"></div>
-    <div class="leaf leaf-4"></div>
+    <div class="leaf leaf-1" data-depth="0.2"></div>
+    <div class="leaf leaf-2" data-depth="0.2"></div>
+    <div class="leaf leaf-3" data-depth="0.2"></div>
+    <div class="leaf leaf-4" data-depth="0.2"></div>
 
 </section>
 
@@ -987,6 +1116,48 @@
                     </p>
                 </div>
 
+            </div>
+        </div>
+    </div>
+    <div class="footer-top-mobi">
+        <div class="container">
+            <div class="row footer-top-mobi_slider">
+                <div class="footer-top_iconBlock">
+                    <div class="footer-top_image"><img src="../images/outstandingIcon.png" alt="" width="80"></div>
+                    <div class="footer-top_content">
+                        <h6>Outstanding</h6>
+                        <p>
+                            <small>633+ customers have declared us</small>
+                        </p>
+                    </div>
+                </div>
+                <div class="footer-top_iconBlock">
+                    <div class="footer-top_image"><img src="../images/priceMatchIcon.png" alt="" width="80"></div>
+                    <div class="footer-top_content">
+                        <h6>Our price match promise</h6>
+                        <p>
+                            <small>We will beat or match other retailers</small>
+                        </p>
+                    </div>
+                </div>
+                <div class="footer-top_iconBlock">
+                    <div class="footer-top_image"><img src="../images/ukDeliveryIcon.png" alt="" width="80"></div>
+                    <div class="footer-top_content">
+                        <h6>Free UK delivery over £35</h6>
+                        <p>
+                            <small>Save on postage today</small>
+                        </p>
+                    </div>
+                </div>
+                <div class="footer-top_iconBlock">
+                    <div class="footer-top_image"><img src="../images/dataProtactionIcon.png" alt="" width="80"></div>
+                    <div class="footer-top_content">
+                        <h6>Customer Data Protection</h6>
+                        <p>
+                            <small>Your data is safe and secure with us</small>
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

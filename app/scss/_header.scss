@@ -11,6 +11,9 @@
             color: #545454 !important;
         }
     }
+    &bar-mobi-header{
+        display: none;
+    }
 }
 
 .topHeader {
@@ -116,6 +119,17 @@
     .navbar-light .navbar-toggler {
         color: #000;
         border-color: transparent;
+    }
+    .navbar-mobi-header{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 28px;
+
+        .searchIcon{
+            position: initial;
+            right: auto;
+        }
     }
 }
 

@@ -1,7 +1,3 @@
-// body{
-//     overflow-x: hidden;
-// }
-
 // Top Green Belt Starts
 
 .topBelt {
@@ -28,7 +24,7 @@
 // Banner Slider Starts
 
  .bSlider {
-    .bSliderImageWrapper {
+    &ImageWrapper {
         background-size: cover !important;
         position: relative;
         min-width: 100vw;
@@ -45,26 +41,29 @@
     // }   
     ul {
         list-style-type: none;
-    }
-    ul.slick-dots {
-        position: absolute;
-        bottom: 13px;
-        right: 79px;
-    }
-    ul.slick-dots li button {
-        margin-left: 10px;
-        width: 42px;
-        height: 6px;
-        font-size: 0;
-        border: 0;
-        border-radius: 15px;
-        background: #fff;
-    }
-    ul.slick-dots li {
-        float: left;
-    }
-    ul.slick-dots li.slick-active button {
-        background: #9db7b8;
+
+        &.slick-dots {
+            position: absolute;
+            bottom: 13px;
+            right: 79px;
+
+            li {
+                float: left;
+
+                & button {
+                    margin-left: 10px;
+                    width: 42px;
+                    height: 6px;
+                    font-size: 0;
+                    border: 0;
+                    border-radius: 15px;
+                    background: #fff;
+                }
+                &.slick-active button {
+                    background: #9db7b8;
+                }
+            }
+        }
     }
 }
 
@@ -183,16 +182,16 @@
     .newArrival{
         &Wrapper{
             padding: 25px 0 40px 0;
+
+            .newArrivalCard {
+                max-width: 250px;
+            }
         }
         &Slider {
             padding: 0 15px;
     
             .newSliderMainInner {
                 min-height: 330px;
-                max-width: 250px;
-            }
-            .newSliderContentWrapper {
-                max-width: 250px;
             }
         }
     }
@@ -213,26 +212,26 @@
     background: #fff;
     padding: 130px 0 80px 0;
 
-    .rangeSliderMainInner {
-        background-size: cover !important;
+    &MainInner {
+        background-size: contain !important;
         min-height: 300px;
         border-radius: 20px;
     }
-    .rangeSliderCard{
+    &Card{
         margin: 0 10px;
     }
-    .rangeSliderImageTitle {
+    &ImageTitle {
         font-family: 'gilroy-medium';
         font-size: 22px;
         text-align: center;
         margin-top: 18px;
     }
-    .rangeSliderCarousel .slick-next {
+    &Carousel .slick-next {
         position: absolute;
         top: 50%;
         left: calc(100% + 15px);
     }
-    .rangeSliderCarousel .slick-next{
+    &Carousel .slick-next{
         @include sliderArrows;
         border-top: 2px solid #000;
         border-left: 2px solid #000;
@@ -240,12 +239,12 @@
         border-right: 2px solid transparent;
         @include sliderNextArrowsPosition;
     }
-    .rangeSliderCarousel .slick-prev {
+    &Carousel .slick-prev {
         position: absolute;
         top: 50%;
         left: -41px;
     }
-    .rangeSliderCarousel .slick-prev{
+    &Carousel .slick-prev{
         @include sliderArrows;
         border-bottom: 2px solid #000;
         border-right: 2px solid #000;
@@ -253,11 +252,11 @@
         border-left: 2px solid transparent;
         @include sliderPrevArrowsPosition;
     }
-    .rangeSliderCarousel .slick-prev.slick-disabled{
+    &Carousel .slick-prev.slick-disabled{
         border-bottom: 2px solid #c3c3c3;
         border-right: 2px solid #c3c3c3;
     }
-    .rangeSliderCarousel .slick-next.slick-disabled{
+    &Carousel .slick-next.slick-disabled{
         border-top: 2px solid #c3c3c3;
         border-left: 2px solid #c3c3c3;
     }
@@ -271,75 +270,124 @@
 @media all and (max-width: 767px) {
     .rangeSlider {
         padding: 25px 0 40px 0;
-    }
-    .rangeSliderContainer {
-        padding: 0 15px;
-    }
-    .rangeSlider .rangeSliderMainInner {
-        min-height: 250px;
-        width: 250px;
+
+        &Container {
+            padding: 0 15px;
+        }
+        & .rangeSliderMainInner {
+            min-height: 250px;
+            width: 250px;
+        }
     }
 }
 // Shop By Range Slider Ends
 
 // Supplements You Can Trust Starts
-.suppYouCanTrust{
-    padding: 55px 0 80px 0;
-}
-.suppContentWrapper {
-    text-align: center;
-
-    .suppMainTitle{
-        font-size: 64.29px;
-        font-family: 'gilroy-light';
-        margin-bottom: 30px;
+.supp{
+    &Device{
+        display: contents;
     }
-    .suppSubTitle {
-        font-size: 26.76px;
-        font-family: 'gilroy-medium';
-        margin-bottom: 30px;
+    &Mobi{
+        display: none;
     }
-    .suppContent {
-        font-size: 17.14px;
-        font-family: 'gilroy-medium';
-        margin-bottom: 60px;
+    &YouCanTrust{
+        padding: 55px 0 80px 0;
     }
-}
-.suppImageWrapper{
-    text-align: center;
-
-    .suppImage {
-        min-height: 57px;
-        border-radius: 20px;
-    }
-    .suppContent {
-        font-size: 17.14px;
-        font-family: "gilroy-medium";
-        margin-top: 35px;
-    }
-}
-@media all and (max-width: 767px) {
-    .suppYouCanTrust{
-        padding: 25px 0 40px 0;
-    }
-    .suppContentWrapper {
-        .suppContent {
+    &ContentWrapper {
+        text-align: center;
+    
+        .suppMainTitle{
+            font-size: 64.29px;
+            font-family: 'gilroy-light';
             margin-bottom: 30px;
         }
         .suppSubTitle {
             font-size: 26.76px;
-            font-family: "gilroy-medium";
-            margin-bottom: 20px;
+            font-family: 'gilroy-medium';
+            margin-bottom: 30px;
         }
-        .suppMainTitle{
-            font-size: 39.98px;
+        .suppContent {
+            font-size: 17.14px;
+            font-family: 'gilroy-medium';
+            margin-bottom: 60px;
         }
     }
-    .suppImageWrapper {
-        margin-bottom: 20px;
+    &ImageWrapper{
+        text-align: center;
+    
+        .supp{
+            &Image {
+                min-height: 57px;
+                border-radius: 20px;
+                background-size: contain !important;
+            }
+            &Content {
+                font-size: 17.14px;
+                font-family: "gilroy-medium";
+                margin-top: 35px;
+            }
+        }
     }
-    .suppImageWrapper .suppContent {
-        margin-top: 15px;
+}
+
+
+
+@media all and (max-width: 767px) {
+    .supp{
+        &Device{
+            display: none;
+        }
+        &Mobi{
+            display: block;
+        }
+        &YouCanTrust{
+            padding: 25px 0 40px 0;
+        }
+        &ContentWrapper {
+            .suppContent {
+                margin-bottom: 30px;
+            }
+            .suppSubTitle {
+                font-size: 26.76px;
+                font-family: "gilroy-medium";
+                margin-bottom: 20px;
+            }
+            .suppMainTitle{
+                font-size: 39.98px;
+            }
+        }
+        &ContentWrapper {
+            .suppContent {
+                margin-bottom: 30px;
+            }
+            .suppSubTitle {
+                font-size: 26.76px;
+                font-family: "gilroy-medium";
+                margin-bottom: 20px;
+            }
+            .suppMainTitle{
+                font-size: 39.98px;
+            }
+        }
+        &ContentWrapper {
+            .suppContent {
+                margin-bottom: 30px;
+            }
+            .suppSubTitle {
+                font-size: 26.76px;
+                font-family: "gilroy-medium";
+                margin-bottom: 20px;
+            }
+            .suppMainTitle{
+                font-size: 39.98px;
+            }
+        }
+        &ImageWrapper {
+            margin: auto 5px 20px 5px;
+        }
+        &ImageWrapper .suppContent {
+            margin-top: 15px;
+        }
     }
 }
 @media all and (min-width: 768px) and (max-width:1023px) {
@@ -389,6 +437,12 @@
 .latestArtical{
     padding: 55px 0 80px 0;
 
+    &SliderContainer{
+        display: none;
+    }
+    &Container{
+        display: block;
+    }
     a{
         color: #000;
         text-decoration: none;
@@ -418,14 +472,19 @@
 
 @media all and (max-width: 767px) {
     .latestArtical {
-        padding: 25px 0 40px 0;
-
+        padding: 25px 0 0 0;
+        &SliderContainer{
+            display: block;
+        }
+        &Container{
+            display: none;
+        }
         &ContentWrapper {
             margin-bottom: 30px;
         }
     }
 }
-@media all and (max-width: 575px) {
+@media all and (max-width: 767px) {
     .latestArtical {
         margin: 0 0 0 15px;
 
@@ -557,6 +616,7 @@
 }
 @media all and (max-width: 767px) {
     .customerReview{
+        margin-top: 0;
         &Detail {
             margin-top: 20px;
         }
@@ -614,7 +674,8 @@
 
 @media all and (max-width: 767px) {
     .trustpilotBelt{
-
+        padding: 15px 0;
+        text-align: center;
         &Text {
             margin-left: auto;
             display: block;
@@ -735,6 +796,7 @@
                 margin: 0 auto;
             }
             &ContentWrapper {
+                width: 50%;
                 padding-top: 0;
             }
         }
@@ -782,3 +844,54 @@
     }
 }
 // Best Seller Slider Ends
+
+// Best Seller Mobile Slider Starts
+.best-seller{
+    &-mobile{
+       display: none; 
+    }
+}
+@media all and (max-width: 767px) {
+    .best-seller{
+        &-mobile{
+           display: block; 
+           background: #f4f4f4;
+            padding: 25px 10px 40px 10px;
+        }
+        &-image {
+            min-height: 330px;
+            max-width: 250px;
+            background-size: cover !important;
+            border-radius: 20px;
+        }
+        &-container {
+            max-width: 250px;
+            margin: 0 10px 0 10px;
+        }
+        &-content-container {
+            text-align: center;
+            padding-top: 20px;
+
+            button{
+                position: relative;
+                padding: 0.5rem 3rem 0.5rem 1rem;
+            }
+        }
+        &-title {
+            font-family: "gilroy-medium";
+            font-size: 18.21px;
+            margin-bottom: 15px;
+        }
+        &-content {
+            font-size: 15px;
+            font-family: "gilroy-regular";
+        }
+        &-price {
+            font-family: "gilroy-bold";
+            font-size: 22.54px;
+            color: #1e53a0;
+            margin-bottom: 16px;
+        }
+    }   
+}
+// Best Seller Mobile Slider Ends

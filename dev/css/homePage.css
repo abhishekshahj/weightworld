@@ -15,7 +15,7 @@
   text-decoration: none;
 }
 
-.bSlider .bSliderImageWrapper {
+.bSliderImageWrapper {
   background-size: cover !important;
   position: relative;
   min-width: 100vw;
@@ -29,6 +29,9 @@
   bottom: 13px;
   right: 79px;
 }
+.bSlider ul.slick-dots li {
+  float: left;
+}
 .bSlider ul.slick-dots li button {
   margin-left: 10px;
   width: 42px;
@@ -37,9 +40,6 @@
   border: 0;
   border-radius: 15px;
   background: #fff;
-}
-.bSlider ul.slick-dots li {
-  float: left;
 }
 .bSlider ul.slick-dots li.slick-active button {
   background: #9db7b8;
@@ -146,15 +146,14 @@
   .newArrivalWrapper {
     padding: 25px 0 40px 0;
   }
+  .newArrivalWrapper .newArrivalCard {
+    max-width: 250px;
+  }
   .newArrivalSlider {
     padding: 0 15px;
   }
   .newArrivalSlider .newSliderMainInner {
     min-height: 330px;
-    max-width: 250px;
-  }
-  .newArrivalSlider .newSliderContentWrapper {
-    max-width: 250px;
   }
 
   .btn-green {
@@ -172,26 +171,26 @@
   background: #fff;
   padding: 130px 0 80px 0;
 }
-.rangeSlider .rangeSliderMainInner {
-  background-size: cover !important;
+.rangeSliderMainInner {
+  background-size: contain !important;
   min-height: 300px;
   border-radius: 20px;
 }
-.rangeSlider .rangeSliderCard {
+.rangeSliderCard {
   margin: 0 10px;
 }
-.rangeSlider .rangeSliderImageTitle {
+.rangeSliderImageTitle {
   font-family: "gilroy-medium";
   font-size: 22px;
   text-align: center;
   margin-top: 18px;
 }
-.rangeSlider .rangeSliderCarousel .slick-next {
+.rangeSliderCarousel .slick-next {
   position: absolute;
   top: 50%;
   left: calc(100% + 15px);
 }
-.rangeSlider .rangeSliderCarousel .slick-next {
+.rangeSliderCarousel .slick-next {
   display: block;
   font-size: 0;
   width: 25px;
@@ -203,12 +202,12 @@
   border-right: 2px solid transparent;
   transform: rotate(135deg);
 }
-.rangeSlider .rangeSliderCarousel .slick-prev {
+.rangeSliderCarousel .slick-prev {
   position: absolute;
   top: 50%;
   left: -41px;
 }
-.rangeSlider .rangeSliderCarousel .slick-prev {
+.rangeSliderCarousel .slick-prev {
   display: block;
   font-size: 0;
   width: 25px;
@@ -220,11 +219,11 @@
   border-left: 2px solid transparent;
   transform: rotate(135deg);
 }
-.rangeSlider .rangeSliderCarousel .slick-prev.slick-disabled {
+.rangeSliderCarousel .slick-prev.slick-disabled {
   border-bottom: 2px solid #c3c3c3;
   border-right: 2px solid #c3c3c3;
 }
-.rangeSlider .rangeSliderCarousel .slick-next.slick-disabled {
+.rangeSliderCarousel .slick-next.slick-disabled {
   border-top: 2px solid #c3c3c3;
   border-left: 2px solid #c3c3c3;
 }
@@ -238,20 +237,23 @@
   .rangeSlider {
     padding: 25px 0 40px 0;
   }
-
   .rangeSliderContainer {
     padding: 0 15px;
   }
-
   .rangeSlider .rangeSliderMainInner {
     min-height: 250px;
     width: 250px;
   }
 }
+.suppDevice {
+  display: contents;
+}
+.suppMobi {
+  display: none;
+}
 .suppYouCanTrust {
   padding: 55px 0 80px 0;
 }
-
 .suppContentWrapper {
   text-align: center;
 }
@@ -270,13 +272,13 @@
   font-family: "gilroy-medium";
   margin-bottom: 60px;
 }
-
 .suppImageWrapper {
   text-align: center;
 }
 .suppImageWrapper .suppImage {
   min-height: 57px;
   border-radius: 20px;
+  background-size: contain !important;
 }
 .suppImageWrapper .suppContent {
   font-size: 17.14px;
@@ -285,10 +287,15 @@
 }
 
 @media all and (max-width: 767px) {
+  .suppDevice {
+    display: none;
+  }
+  .suppMobi {
+    display: block;
+  }
   .suppYouCanTrust {
     padding: 25px 0 40px 0;
   }
-
   .suppContentWrapper .suppContent {
     margin-bottom: 30px;
   }
@@ -300,11 +307,31 @@
   .suppContentWrapper .suppMainTitle {
     font-size: 39.98px;
   }
-
-  .suppImageWrapper {
+  .suppContentWrapper .suppContent {
+    margin-bottom: 30px;
+  }
+  .suppContentWrapper .suppSubTitle {
+    font-size: 26.76px;
+    font-family: "gilroy-medium";
     margin-bottom: 20px;
   }
-
+  .suppContentWrapper .suppMainTitle {
+    font-size: 39.98px;
+  }
+  .suppContentWrapper .suppContent {
+    margin-bottom: 30px;
+  }
+  .suppContentWrapper .suppSubTitle {
+    font-size: 26.76px;
+    font-family: "gilroy-medium";
+    margin-bottom: 20px;
+  }
+  .suppContentWrapper .suppMainTitle {
+    font-size: 39.98px;
+  }
+  .suppImageWrapper {
+    margin: auto 5px 20px 5px;
+  }
   .suppImageWrapper .suppContent {
     margin-top: 15px;
   }
@@ -350,6 +377,12 @@
 .latestArtical {
   padding: 55px 0 80px 0;
 }
+.latestArticalSliderContainer {
+  display: none;
+}
+.latestArticalContainer {
+  display: block;
+}
 .latestArtical a {
   color: #000;
   text-decoration: none;
@@ -377,13 +410,19 @@
 
 @media all and (max-width: 767px) {
   .latestArtical {
-    padding: 25px 0 40px 0;
+    padding: 25px 0 0 0;
+  }
+  .latestArticalSliderContainer {
+    display: block;
+  }
+  .latestArticalContainer {
+    display: none;
   }
   .latestArticalContentWrapper {
     margin-bottom: 30px;
   }
 }
-@media all and (max-width: 575px) {
+@media all and (max-width: 767px) {
   .latestArtical {
     margin: 0 0 0 15px;
   }
@@ -508,6 +547,9 @@
   }
 }
 @media all and (max-width: 767px) {
+  .customerReview {
+    margin-top: 0;
+  }
   .customerReviewDetail {
     margin-top: 20px;
   }
@@ -556,6 +598,10 @@
 }
 
 @media all and (max-width: 767px) {
+  .trustpilotBelt {
+    padding: 15px 0;
+    text-align: center;
+  }
   .trustpilotBeltText {
     margin-left: auto;
     display: block;
@@ -663,6 +709,7 @@
     margin: 0 auto;
   }
   .bestSellerSliderContentWrapper {
+    width: 50%;
     padding-top: 0;
   }
 }
@@ -704,5 +751,49 @@
 @media all and (max-width: 767px) {
   .bestSeller {
     display: none !important;
+  }
+}
+.best-seller-mobile {
+  display: none;
+}
+
+@media all and (max-width: 767px) {
+  .best-seller-mobile {
+    display: block;
+    background: #f4f4f4;
+    padding: 25px 10px 40px 10px;
+  }
+  .best-seller-image {
+    min-height: 330px;
+    max-width: 250px;
+    background-size: cover !important;
+    border-radius: 20px;
+  }
+  .best-seller-container {
+    max-width: 250px;
+    margin: 0 10px 0 10px;
+  }
+  .best-seller-content-container {
+    text-align: center;
+    padding-top: 20px;
+  }
+  .best-seller-content-container button {
+    position: relative;
+    padding: 0.5rem 3rem 0.5rem 1rem;
+  }
+  .best-seller-title {
+    font-family: "gilroy-medium";
+    font-size: 18.21px;
+    margin-bottom: 15px;
+  }
+  .best-seller-content {
+    font-size: 15px;
+    font-family: "gilroy-regular";
+  }
+  .best-seller-price {
+    font-family: "gilroy-bold";
+    font-size: 22.54px;
+    color: #1e53a0;
+    margin-bottom: 16px;
   }
 }
