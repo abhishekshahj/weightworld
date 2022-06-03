@@ -331,6 +331,9 @@
             font-family: "gilroy-medium";
             margin-bottom: 20px;
         }
+        .suppMainTitle{
+            font-size: 39.98px;
+        }
     }
     .suppImageWrapper {
         margin-bottom: 20px;
@@ -719,10 +722,6 @@
 .bestSeller h2.bestSellerSliderImageText{
     font-family: "gilroy-extrabold";
 }
-
-@media all and (max-width:767px) {
-    .bestSeller{display: none;}
-}
 @media all and (min-width: 768px) and (max-width:1023px) {
     .bestSeller{
 
@@ -775,5 +774,11 @@
 }
 .banner-slider {
     width: 1005px;
+}
+
+@media all and (max-width: 767px) {
+    .bestSeller {
+        display: none !important;
+    }
 }
 // Best Seller Slider Ends

@@ -305,5 +305,18 @@ $(document).ready(function(){
     // Latest Artical Slider Ends
 
     $('.sliderImageTitle').sameHeight();
+
+    // New Arrivals Slider Starts
+
+    $('.bestSellerMobileCarousel').slick({
+      variableWidth: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      infinite: true
+    });
+    
+    // New Arrivals Slider Ends
     
   });
+  
