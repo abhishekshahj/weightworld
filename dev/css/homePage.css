@@ -15,6 +15,11 @@
   text-decoration: none;
 }
 
+@media all and (max-width: 767px) {
+  .topBeltInnerWrapper {
+    font-size: 10px;
+  }
+}
 .bSliderImageWrapper {
   background-size: cover !important;
   position: relative;
@@ -49,6 +54,23 @@
   .bSlider .bSliderImageWrapper {
     min-height: 70vh;
   }
+  .bSlider ul {
+    list-style-type: none;
+  }
+  .bSlider ul.slick-dots {
+    position: absolute;
+    bottom: 26px;
+    padding: 0;
+    left: 0;
+    width: 100%;
+    right: 0;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .bSlider ul.slick-dots li {
+    float: none;
+    display: inline-block;
+  }
 }
 .contentContainer {
   font-family: "gilroy-light";
@@ -68,9 +90,10 @@
   padding: 55px 0 80px 0;
 }
 .newArrivalWrapper .btn {
-  color: #fff;
   position: relative;
-  padding: 0.5rem 3rem 0.5rem 1rem;
+  font-family: "gilroy-semibold";
+  padding: 0.5rem 48px 0.5rem 34px;
+  color: #fff;
 }
 .newArrivalWrapper .newArrivalCard {
   margin: 0 10px;
@@ -87,17 +110,18 @@
 .newArrivalWrapper .newSliderContentWrapper p {
   font-size: 15px;
   font-family: "gilroy-regular";
+  margin-bottom: 10px;
 }
 .newArrivalWrapper .newSliderContentWrapper .sliderImageTitle {
   font-family: "gilroy-medium";
   font-size: 18.21px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 .newArrivalWrapper .newSliderContentWrapper .sliderImagePrice {
   font-family: "gilroy-bold";
   font-size: 22.54px;
   color: #1e53a0;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 }
 .newArrivalWrapper .newArrivalsSliderContainer .slick-next {
   position: absolute;
@@ -168,7 +192,7 @@
   }
 }
 .rangeSlider {
-  background: #fff;
+  background: #f4f4f4;
   padding: 130px 0 80px 0;
 }
 .rangeSliderMainInner {
@@ -284,6 +308,7 @@
   font-size: 17.14px;
   font-family: "gilroy-medium";
   margin-top: 35px;
+  margin-bottom: 0;
 }
 
 @media all and (max-width: 767px) {
@@ -332,6 +357,9 @@
   .suppImageWrapper {
     margin: auto 5px 20px 5px;
   }
+  .suppImageWrapper .suppImage {
+    min-height: 45px;
+  }
   .suppImageWrapper .suppContent {
     margin-top: 15px;
   }
@@ -344,6 +372,9 @@
 .customerImage {
   background: #f4f4f4;
   padding: 55px 0 80px 0;
+}
+.customerImage h2 .font-medium {
+  font-family: "gilroy-medium";
 }
 .customerImageSliderMainInner {
   background-size: cover !important;
@@ -420,6 +451,13 @@
   }
   .latestArticalContentWrapper {
     margin-bottom: 30px;
+  }
+  .latestArticalTextWrapper {
+    margin-top: 18px;
+  }
+  .latestArticalTitle {
+    margin-top: 12px;
+    font-size: 17.58px;
   }
 }
 @media all and (max-width: 767px) {
@@ -573,10 +611,16 @@
     background: none;
     padding: 38px 15px 100px 15px;
   }
+  .customerReviewLeftSection img {
+    height: 40px;
+  }
 }
 .trustpilotBelt {
   padding: 50px 0;
   text-align: center;
+}
+.trustpilotBelt .text-underline {
+  text-decoration: underline;
 }
 .trustpilotBeltWrapper {
   display: flex;
@@ -629,7 +673,7 @@
 }
 .bestSellerLeaf {
   position: absolute;
-  background-image: url(../images/best-seller-leaf.png);
+  background-image: url(../images/best-seller-leaf-1.png);
   background-size: cover;
   background-repeat: no-repeat;
   height: 626px;
@@ -784,17 +828,18 @@
   .best-seller-title {
     font-family: "gilroy-medium";
     font-size: 18.21px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
   .best-seller-content {
     font-size: 15px;
     font-family: "gilroy-regular";
+    margin-bottom: 10px;
   }
   .best-seller-price {
     font-family: "gilroy-bold";
     font-size: 22.54px;
     color: #1e53a0;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
   }
 }
 .cart-slide {
@@ -807,8 +852,7 @@
   position: absolute;
   right: 0;
 }
-.cart-slide::after {
-  content: "";
+.cart-slide-cross {
   width: 23px;
   height: 23px;
   background: url(/images/close-button.png) no-repeat center;
@@ -817,6 +861,20 @@
   top: 25px;
   right: 25px;
   cursor: pointer;
+}
+.cart-slide_empty {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+  flex-direction: column;
+}
+.cart-slide_empty_content {
+  font-size: 25.71px;
+  font-family: "gilroy-light";
+  text-align: center;
+  width: 250px;
+  margin-top: 24px;
 }
 .cart-slide-inner {
   width: 400px;

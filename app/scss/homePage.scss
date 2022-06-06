@@ -18,6 +18,13 @@
         }
     }
 }
+@media all and (max-width: 767px) {
+    .topBelt{
+        &InnerWrapper{
+            font-size: 10px;
+        }
+    }
+}
 
 // Top Green Belt Ends
 
@@ -68,9 +75,31 @@
 }
 
 @media all and (max-width: 767px) {
-    .bSlider .bSliderImageWrapper {
-        min-height: 70vh;
-    }
+    .bSlider{
+        & .bSliderImageWrapper {
+            min-height: 70vh;
+        }
+        ul {
+            list-style-type: none;
+    
+            &.slick-dots {
+                position: absolute;
+                bottom: 26px;
+                padding: 0;
+                left: 0;
+                width: 100%;
+                right: 0;
+                text-align: center;
+                margin: 0 auto;
+    
+                li {
+                    float: none;
+                    display: inline-block;
+    
+                }
+            }
+        }
+    } 
 }
 
 // Banner Slider Ends
@@ -106,9 +135,10 @@
     padding: 55px 0 80px 0;
 
     .btn{
-        color: #fff;
         position: relative;
-        padding: 0.5rem 3rem 0.5rem 1rem;
+        font-family: 'gilroy-semibold';
+        padding: 0.5rem 48px 0.5rem 34px;
+        color: #fff;
     }
 
     .newArrivalCard {
@@ -126,19 +156,20 @@
         p{
             font-size: 15px;
             font-family: 'gilroy-regular';
+            margin-bottom: 10px;
         }
 
         .sliderImageTitle {
             font-family: 'gilroy-medium';
             font-size: 18.21px;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
         .sliderImagePrice {
             font-family: "gilroy-bold";
             font-size: 22.54px;
             color: #1e53a0;
-            margin-bottom: 16px;
+            margin-bottom: 10px;
         }
     }
     .newArrivalsSliderContainer{
@@ -213,7 +244,7 @@
 
 // Shop By Range Slider Starts
 .rangeSlider{
-    background: #fff;
+    background: #f4f4f4;
     padding: 130px 0 80px 0;
 
     &MainInner {
@@ -329,6 +360,7 @@
                 font-size: 17.14px;
                 font-family: "gilroy-medium";
                 margin-top: 35px;
+                margin-bottom: 0;
             }
         }
     }
@@ -388,6 +420,9 @@
         }
         &ImageWrapper {
             margin: auto 5px 20px 5px;
+            & .suppImage {
+                min-height: 45px;
+            }
         }
         &ImageWrapper .suppContent {
             margin-top: 15px;
@@ -399,12 +434,18 @@
         font-size: 50.29px !important;
     }
 }
+
 // Supplements You Can Trust Ends
 
 // Customer Image Slider Starts
 .customerImage{
     background: #f4f4f4;
     padding: 55px 0 80px 0;
+    h2{
+        & .font-medium{
+            font-family: 'gilroy-medium';
+        }
+    }
 
     &SliderMainInner {
         background-size: cover !important;
@@ -485,6 +526,13 @@
         }
         &ContentWrapper {
             margin-bottom: 30px;
+        }
+        &TextWrapper {
+            margin-top: 18px;
+        }
+        &Title {
+            margin-top: 12px;
+            font-size: 17.58px;
         }
     }
 }
@@ -595,7 +643,7 @@
         &LeftSection{
             min-width: 100%;
             border-radius: 0;
-            text-align: center;
+            text-align: center;            
         }
         &Slider {
             background-color: transparent;
@@ -643,6 +691,9 @@
         &LeftSection {
             background: none;
             padding: 38px 15px 100px 15px;
+            & img{
+                height: 40px;
+            }
         }
     }
 }
@@ -653,6 +704,10 @@
 .trustpilotBelt{
     padding: 50px 0;
     text-align: center;
+
+    .text-underline{
+        text-decoration: underline;
+    }
 
     &Wrapper {
         display: flex;
@@ -712,7 +767,7 @@
 
     &Leaf{
         position: absolute;
-        background-image: url(../images/best-seller-leaf.png);
+        background-image: url(../images/best-seller-leaf-1.png);
         background-size: cover;
         background-repeat: no-repeat;
         height: 626px;
@@ -884,17 +939,18 @@
         &-title {
             font-family: "gilroy-medium";
             font-size: 18.21px;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
         &-content {
             font-size: 15px;
             font-family: "gilroy-regular";
+            margin-bottom: 10px;
         }
         &-price {
             font-family: "gilroy-bold";
             font-size: 22.54px;
             color: #1e53a0;
-            margin-bottom: 16px;
+            margin-bottom: 10px;
         }
     }   
 }
@@ -911,8 +967,7 @@
     position: absolute;
     right: 0;
 
-    &::after {
-        content: "";
+    &-cross {
         width: 23px;
         height: 23px;
         background: url(/images/close-button.png) no-repeat center;
@@ -921,6 +976,22 @@
         top: 25px;
         right: 25px;
         cursor: pointer;
+    }
+
+    &_empty {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        align-items: center;
+        flex-direction: column;
+
+        &_content{
+            font-size: 25.71px;
+            font-family: "gilroy-light";
+            text-align: center;
+            width: 250px;
+            margin-top: 24px;
+        }
     }
 
     &-inner{
