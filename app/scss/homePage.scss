@@ -309,6 +309,7 @@
 @media all and (max-width: 767px) {
     .rangeSlider {
         padding: 25px 0 40px 0;
+        background: #ffffff;
 
         &Container {
             padding: 0 15px;
@@ -325,9 +326,6 @@
 .supp{
     &Device{
         display: contents;
-    }
-    &Mobi{
-        display: none;
     }
     &YouCanTrust{
         padding: 55px 0 80px 0;
@@ -374,12 +372,6 @@
 
 @media all and (max-width: 767px) {
     .supp{
-        &Device{
-            display: none;
-        }
-        &Mobi{
-            display: block;
-        }
         &YouCanTrust{
             padding: 25px 0 40px 0;
         }
@@ -485,9 +477,8 @@
 // Latest Artical Starts
 .latestArtical{
     padding: 55px 0 80px 0;
-
-    &SliderContainer{
-        display: none;
+    &ContentWrapper {
+        margin: 0 15px;
     }
     &Container{
         display: block;
@@ -550,6 +541,11 @@
         }
     }
 }
+@media all and (min-width: 768px) and (max-width:1023px) {
+    .latestArticalContentWrapper {
+        max-width: 300px;
+    }   
+}
 // Latest Artical Ends
 
 // Customer Review Starts
@@ -581,6 +577,7 @@
         text-align: center;
         margin-top: 8px;
         font-family: 'gilroy-semibold';
+        margin-bottom: 0;
     }
     &SliderWrapper {
         background: #fafafc;

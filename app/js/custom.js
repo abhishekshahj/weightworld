@@ -317,11 +317,33 @@ $(".cart-slide-cross").click(function(){
 
     // Latest Artical Slider Starts
       $('.latestArticalCarousel').slick({
-        variableWidth: true,
-        slidesToShow: 2,
+        variableWidth: false,
+        slidesToShow: 4,
         slidesToScroll: 1,
-        infinite: true,
-        arrows: false
+        infinite: false,
+        arrows: false,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              variableWidth: true,
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              infinite: true,
+              arrows: false,
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              variableWidth: true,
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              infinite: true,
+              arrows: false,
+            }
+          }
+        ]
       });
     // Latest Artical Slider Ends
 
@@ -332,13 +354,15 @@ $(".cart-slide-cross").click(function(){
     // Equal Height Plugin Starts
 
     // Footer Carousel Starts
-    
-    $('.footer-top-mobi_slider').slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      infinite: false,
-      arrows: false
-    });
+
+    if ($(window).width() < 768) {
+          $('.footer-top-mobi_slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: false,
+            arrows: false,
+      });
+    }
 
     // Footer Carousel Ends
 
@@ -346,10 +370,22 @@ $(".cart-slide-cross").click(function(){
 
     $('.suppMobiSlider').slick({
       variableWidth: false,
-      slidesToShow: 3,
+      slidesToShow: 6,
       slidesToScroll: 3,
       infinite: false,
-      arrows: false
+      arrows: false,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            variableWidth: false,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            arrows: false,
+            infinite: false
+          }
+        }
+      ]
     });
 
     // Supp Mobile Slider Starts   
