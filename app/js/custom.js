@@ -1,5 +1,11 @@
 $(document).ready(function(){
 
+  $(".cartIcon").click(function(){
+    $(".cart-slide").animate({
+        width: "toggle"
+    });
+});
+
   // Best Seller Leaf Effect Starts
 
   $(window).resize(function() {
