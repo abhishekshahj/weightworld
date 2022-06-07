@@ -1,5 +1,57 @@
 $(document).ready(function(){
 
+  // Footer Links OnClick Menu Open Starts
+      
+  $("body").click(function (e) {
+    if ($(e.target).parents("#countryCombo").length || e.target.id == "countryCombo") {
+      $(".countyList").slideToggle();
+      $(".sel-lang").toggleClass("open");
+    } else {
+      $(".countyList").slideUp();
+      $(".sel-lang").removeClass("open");
+    }
+  });
+
+  $('#all_county_list li').click(function () {
+    var selectedId = $(this).attr('id');
+    console.log(selectedId);
+    if (selectedId != 're_en') {
+      $('#re_en').css("display", "block");
+    } else {
+      $('#re_en').css("display", "none");
+    }
+    var selectedVal = $(this).html();
+    if (selectedVal != '') {
+      /* $('#countryCombo_change').css("display", "block");
+      $('#countryCombo').css("display", "none");*/
+      $('#countryCombo').html(selectedVal);
+    }
+  });
+
+if ($(window).width() < 767) {
+
+  var selector = ".footer-middle_menuWrap";
+  $(selector).click(function (e) {
+    if ($(this).hasClass("active")) {
+      $(selector).removeClass("active");
+      $(this).removeClass("active");
+    } else {
+      $(selector).removeClass("active");
+      $(this).addClass("active");
+    }
+  });
+
+  var socialMedia = $(".footer-middle_socialList");
+
+  $(socialMedia).remove();
+
+  $('.mobilesocialMedia').html(socialMedia);
+
+  console.log(socialMedia);
+
+}
+// Footer Links OnClick Menu Open Starts
+
   $(".cartIcon").click(function(){
     $(".cart-slide").animate({
         width: "toggle"
@@ -31,57 +83,20 @@ $(".cart-slide-cross").click(function(){
   });
   // Best Seller Leaf Effect Ends
 
-  // Footer Links OnClick Menu Open Starts
-      
-    $("body").click(function (e) {
-      if ($(e.target).parents("#countryCombo").length || e.target.id == "countryCombo") {
-        $(".countyList").slideToggle();
-        $(".sel-lang").toggleClass("open");
-      } else {
-        $(".countyList").slideUp();
-        $(".sel-lang").removeClass("open");
-      }
-    });
+  // Footer Carousel Starts
 
-    $('#all_county_list li').click(function () {
-      var selectedId = $(this).attr('id');
-      console.log(selectedId);
-      if (selectedId != 're_en') {
-        $('#re_en').css("display", "block");
-      } else {
-        $('#re_en').css("display", "none");
-      }
-      var selectedVal = $(this).html();
-      if (selectedVal != '') {
-        /* $('#countryCombo_change').css("display", "block");
-        $('#countryCombo').css("display", "none");*/
-        $('#countryCombo').html(selectedVal);
-      }
-    });
+  $(window).resize(function(){
+    if ($(window).width() < 768) {
+      $('.footer-top-mobi_slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: false,
+        arrows: false,
+  });
+}
+});
 
-  if ($(window).width() < 767) {
-
-    var selector = ".footer-middle_menuWrap";
-    $(selector).click(function (e) {
-      if ($(this).hasClass("active")) {
-        $(selector).removeClass("active");
-        $(this).removeClass("active");
-      } else {
-        $(selector).removeClass("active");
-        $(this).addClass("active");
-      }
-    });
-
-    var socialMedia = $(".footer-middle_socialList");
-
-    $(socialMedia).remove();
-
-    $('.mobilesocialMedia').html(socialMedia);
-
-    console.log(socialMedia);
-
-  }
-  // Footer Links OnClick Menu Open Starts
+  // Footer Carousel Ends
 
   // Best Seller Slider Starts
   if ($('.bestSellerSliderContainer').length) {
@@ -353,19 +368,6 @@ $(".cart-slide-cross").click(function(){
 
     // Equal Height Plugin Starts
 
-    // Footer Carousel Starts
-
-    if ($(window).width() < 768) {
-          $('.footer-top-mobi_slider').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            infinite: false,
-            arrows: false,
-      });
-    }
-
-    // Footer Carousel Ends
-
     // Supp Mobile Slider Starts
 
     $('.suppMobiSlider').slick({
@@ -380,7 +382,7 @@ $(".cart-slide-cross").click(function(){
           settings: {
             variableWidth: false,
             slidesToShow: 3,
-            slidesToScroll: 3,
+            slidesToScroll: 1,
             arrows: false,
             infinite: false
           }

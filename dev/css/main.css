@@ -10741,6 +10741,7 @@ strong.light {
 
 @media only screen and (max-width: 767px) {
   .form-control {
+    background: #fafafc !important;
     -webkit-box-shadow: 0 -7px 20px 0 rgba(0, 64, 107, 0.15);
     box-shadow: 0 -7px 20px 0 rgba(0, 64, 107, 0.15);
   }
@@ -10753,11 +10754,11 @@ strong.light {
     overflow: hidden;
   }
   .subscribe-wrap .leaf-1 {
-    background-size: cover;
-    height: 263px;
+    background-size: contain;
+    height: 190px;
     width: 190px;
     top: 29px !important;
-    left: -145px !important;
+    left: -94px !important;
   }
   .subscribe-wrap .leaf-2 {
     display: none !important;
@@ -10766,10 +10767,12 @@ strong.light {
     display: none !important;
   }
   .subscribe-wrap .leaf-4 {
-    height: 250px;
+    height: 191px;
     width: 150px;
-    right: -134px !important;
-    transform: rotate(-34deg) !important;
+    top: 39px !important;
+    right: -108px !important;
+    transform: rotate(-16deg) !important;
+    background-size: contain;
   }
   .subscribe-block {
     background: transparent;
@@ -10807,6 +10810,8 @@ strong.light {
 
   .footer-top_wrap {
     margin-bottom: 20px;
+    border: 0;
+    padding: 0;
   }
   .footer-top_image {
     float: left;
