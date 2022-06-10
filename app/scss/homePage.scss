@@ -186,8 +186,8 @@
             @include sliderArrows;
             border-top: 2px solid #000;
             border-left: 2px solid #000;
-            border-bottom: 2px solid #f4f4f4;
-            border-right: 2px solid #f4f4f4;
+            border-bottom: 2px solid transparent;
+            border-right: 2px solid transparent;
             @include sliderNextArrowsPosition;
 
             &.slick-disabled{
@@ -204,8 +204,8 @@
             @include sliderArrows;
             border-bottom: 2px solid #000;
             border-right: 2px solid #000;
-            border-top: 2px solid #f4f4f4;
-            border-left: 2px solid #f4f4f4;
+            border-top: 2px solid transparent;
+            border-left: 2px solid transparent;
             @include sliderPrevArrowsPosition;
 
             &.slick-disabled{
@@ -242,6 +242,19 @@
         top: 9px;
         right: 20px;
         font-size: 20px;
+    }
+}
+
+@media all and (min-width: 1024px) and (max-width:1439px) {
+    .newArrivalWrapper{
+        & .newArrivalsSliderContainer{
+            & .slick-next {
+                left: calc(100% + -11px);
+            }
+            & .slick-prev {
+                left: -11px;
+            }
+        }
     }
 }
 // New Arrivals Slider Ends
@@ -317,6 +330,19 @@
         & .rangeSliderMainInner {
             min-height: 250px;
             width: 250px;
+        }
+    }
+}
+@media all and (min-width: 1024px) and (max-width:1439px) {
+    .rangeSliderCarousel{
+        & .slick-prev {
+            left: -11px;
+        }
+        & .slick-next {
+            left: calc(100% - 11px);
+        }
+        .newArrivalWrapper .newArrivalCard {
+            max-width: 275px;
         }
     }
 }
@@ -561,7 +587,7 @@
     &LeftSection {
         background: #f0f0f0;
         border-radius: 0 20px 20px 0;
-        padding: 110px 0;
+        padding: 110px 15px;
     }
     &LeftSection::before {
         content: "";
@@ -852,7 +878,7 @@
         }
         &Slider{
             &ImageWrapper img {
-                width: 185px;
+                width: 417px;
                 float: none;
                 margin: 0 auto;
             }
