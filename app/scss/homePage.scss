@@ -193,6 +193,7 @@
             &.slick-disabled{
                 border-top: 2px solid #c3c3c3;
                 border-left: 2px solid #c3c3c3;
+                cursor: auto;
             }
         }
         &  .slick-prev {
@@ -211,6 +212,7 @@
             &.slick-disabled{
                 border-bottom: 2px solid #c3c3c3;
                 border-right: 2px solid #c3c3c3;
+                cursor: auto;
             }
         }
     }
@@ -307,10 +309,12 @@
     &Carousel .slick-prev.slick-disabled{
         border-bottom: 2px solid #c3c3c3;
         border-right: 2px solid #c3c3c3;
+        cursor: auto;
     }
     &Carousel .slick-next.slick-disabled{
         border-top: 2px solid #c3c3c3;
         border-left: 2px solid #c3c3c3;
+        cursor: auto;
     }
 }
 @media all and (min-width: 768px) and (max-width:1023px) {

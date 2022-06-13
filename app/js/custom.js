@@ -117,6 +117,8 @@ $(document).ready(function () {
         infinite: false,
         arrows: false,
       });
+    } else {
+      $(".footer-top-mobi_slider").slick("unslick");
     }
   });
 
@@ -231,7 +233,7 @@ $(document).ready(function () {
         },
       },
       {
-        breakpoint: 1023,
+        breakpoint: 1024,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
@@ -449,6 +451,20 @@ $(document).ready(function () {
     slidesToScroll: 1,
     infinite: false,
     arrows: false,
+  });
+
+  $(window).resize(function () {
+    if ($(window).width() < 768) {
+      $(".best-seller-mobile-slider").slick({
+        variableWidth: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: false,
+        arrows: false,
+      });
+    } else {
+      $(".best-seller-mobile-slider").slick("unslick");
+    }
   });
 
   // Best Seller Mobile Slider Ends

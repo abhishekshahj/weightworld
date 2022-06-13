@@ -147,6 +147,7 @@
 .newArrivalWrapper .newArrivalsSliderContainer .slick-next.slick-disabled {
   border-top: 2px solid #c3c3c3;
   border-left: 2px solid #c3c3c3;
+  cursor: auto;
 }
 .newArrivalWrapper .newArrivalsSliderContainer .slick-prev {
   position: absolute;
@@ -168,6 +169,7 @@
 .newArrivalWrapper .newArrivalsSliderContainer .slick-prev.slick-disabled {
   border-bottom: 2px solid #c3c3c3;
   border-right: 2px solid #c3c3c3;
+  cursor: auto;
 }
 
 @media all and (max-width: 767px) {
@@ -258,10 +260,12 @@
 .rangeSliderCarousel .slick-prev.slick-disabled {
   border-bottom: 2px solid #c3c3c3;
   border-right: 2px solid #c3c3c3;
+  cursor: auto;
 }
 .rangeSliderCarousel .slick-next.slick-disabled {
   border-top: 2px solid #c3c3c3;
   border-left: 2px solid #c3c3c3;
+  cursor: auto;
 }
 
 @media all and (min-width: 768px) and (max-width: 1023px) {
