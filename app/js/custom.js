@@ -1,93 +1,49 @@
 $(document).ready(function () {
-  // Footer Links OnClick Menu Open Starts
+  // OnScroll Animation Starts
+  function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
 
-  function onClickSearchClose() {
-    $(".search-close").on("click", function () {
-      $("#searchbox").removeClass("show");
-      $("#searchbox").addClass("hide");
-    });
-  }
-  $(document).keyup(function (e) {
-    if (e.keyCode == 27) {
-      onClickSearchClose();
-    }
-  });
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 150;
 
-  $(".search-close").on("click", function () {
-    $("#searchbox").removeClass("show");
-    $("#searchbox").addClass("hide");
-  });
-
-  var headerHeight = $(".navbar").outerHeight();
-  $("#searchbox").css("height", headerHeight + "px");
-
-  $(window).resize(function () {
-    var headerHeight = $(".navbar").outerHeight();
-    $("#searchbox").css("height", headerHeight + "px");
-  });
-
-  $("body").click(function (e) {
-    if (
-      $(e.target).parents("#countryCombo").length ||
-      e.target.id == "countryCombo"
-    ) {
-      $(".countyList").slideToggle();
-      $(".sel-lang").toggleClass("open");
-    } else {
-      $(".countyList").slideUp();
-      $(".sel-lang").removeClass("open");
-    }
-  });
-
-  $("#all_county_list li").click(function () {
-    var selectedId = $(this).attr("id");
-    // console.log(selectedId);
-    if (selectedId != "re_en") {
-      $("#re_en").css("display", "block");
-    } else {
-      $("#re_en").css("display", "none");
-    }
-    var selectedVal = $(this).html();
-    if (selectedVal != "") {
-      /* $('#countryCombo_change').css("display", "block");
-      $('#countryCombo').css("display", "none");*/
-      $("#countryCombo").html(selectedVal);
-    }
-  });
-
-  if ($(window).width() < 767) {
-    var selector = ".footer-middle_menuWrap";
-    $(selector).click(function (e) {
-      if ($(this).hasClass("active")) {
-        $(selector).removeClass("active");
-        $(this).removeClass("active");
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
       } else {
-        $(selector).removeClass("active");
-        $(this).addClass("active");
+        reveals[i].classList.remove("active");
       }
-    });
-
-    var socialMedia = $(".footer-middle_socialList");
-
-    $(socialMedia).remove();
-
-    $(".mobilesocialMedia").html(socialMedia);
-
-    // console.log(socialMedia);
+    }
   }
-  // Footer Links OnClick Menu Open Starts
 
-  $(".cartIcon").click(function () {
-    $(".cart-slide").animate({
-      width: "toggle",
-    });
+  window.addEventListener("scroll", reveal);
+
+  // OnScroll Animation Ends
+  // Best Seller Mobile Slider Starts
+
+  $(".best-seller-mobile-slider").slick({
+    variableWidth: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    infinite: false,
+    arrows: false,
   });
 
-  $(".cart-slide-cross").click(function () {
-    $(".cart-slide").animate({
-      width: "toggle",
-    });
-  });
+  // $(window).resize(function () {
+  //   if ($(window).width() < 767) {
+  //     $(".best-seller-mobile-slider").slick({
+  //       variableWidth: true,
+  //       slidesToShow: 1,
+  //       slidesToScroll: 1,
+  //       infinite: false,
+  //       arrows: false,
+  //     });
+  //   } else {
+  //     $(".best-seller-mobile-slider").slick("unslick");
+  //   }
+  // });
+
+  // Best Seller Mobile Slider Ends
 
   // Best Seller Leaf Effect Starts
 
@@ -106,23 +62,6 @@ $(document).ready(function () {
     }
   });
   // Best Seller Leaf Effect Ends
-
-  // Footer Carousel Starts
-
-  $(window).resize(function () {
-    if ($(window).width() < 768) {
-      $(".footer-top-mobi_slider").slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        infinite: false,
-        arrows: false,
-      });
-    } else {
-      $(".footer-top-mobi_slider").slick("unslick");
-    }
-  });
-
-  // Footer Carousel Ends
 
   // Best Seller Slider Starts
   if ($(".bestSellerSliderContainer").length) {
@@ -442,59 +381,4 @@ $(document).ready(function () {
   });
 
   // Supp Mobile Slider Starts
-
-  // Best Seller Mobile Slider Starts
-
-  $(".best-seller-mobile-slider").slick({
-    variableWidth: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    infinite: false,
-    arrows: false,
-  });
-
-  $(window).resize(function () {
-    if ($(window).width() < 768) {
-      $(".best-seller-mobile-slider").slick({
-        variableWidth: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        infinite: false,
-        arrows: false,
-      });
-    } else {
-      $(".best-seller-mobile-slider").slick("unslick");
-    }
-  });
-
-  // Best Seller Mobile Slider Ends
-
-  // Search Bar For Mobile Starts
-  let searchBox = document.getElementById("searchbox"),
-    searchInput = document.getElementById("search-input"),
-    searchClose = document.getElementById("searchbox-close"),
-    searchLink = document.getElementById("searchIcon");
-
-  let searchToggle = () => {
-      if (searchBox.className === "show") {
-        searchBox.className = "hide";
-        searchLink.className = "";
-        searchInput.value = "";
-        searchInput.blur();
-      } else {
-        searchBox.className = "show";
-        searchLink.className = "active";
-        searchInput.focus();
-      }
-    },
-    searchEnter = () => {
-      if (event.keyCode == 13) {
-        searchToggle();
-      }
-    };
-
-  searchLink.addEventListener("click", searchToggle);
-  searchClose.addEventListener("click", searchToggle);
-  searchInput.addEventListener("keyup", searchEnter);
-  // Search Bar For Mobile Ends
 });

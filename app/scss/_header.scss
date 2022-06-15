@@ -14,6 +14,17 @@
     &bar-mobi-header{
         display: none;
     }
+    &bar{
+        & ul{
+            & li{
+                &.show{
+                    & .plusSign::before {
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+        }
+    }
 }
 
 .topHeader {
@@ -23,11 +34,16 @@
     border-color: #fff;
 }
 .searchBar{
-    width: 338px !important;
+    width: 558px !important;
     border-radius: 20px;
     height: 44px;
     font-size: 15px;
-    font-family: 'gilroy-light';
+    font-family: "gilroy-light";
+    z-index: 11;
+    transition: all 0.8s ease;
+}
+.searchBar.active{
+    width: 338px !important;
 }
 .topHeader form{
     position: relative;
@@ -35,6 +51,7 @@
 .searchIcon {
     position: absolute;
     right: 24px;
+    z-index: 11;
 }
 .cartIcon{
     margin-left: 20px;
@@ -300,3 +317,181 @@
       transform: scaleY(0);
     }
   }
+
+  @media all and (min-width: 1024px) and (max-width:1200px) {
+    .navbar input.form-control{display: none !important;}
+    .searchIcon {
+        position: initial;
+    }
+}
+
+// Cart Slide Starts
+.cart-slide{
+    float: right;
+    overflow: hidden;
+    background: #fff;
+    display: none;
+    height: 100vh;
+    z-index: 11;
+    position: absolute;
+    right: 0;
+
+    &-cross {
+        width: 23px;
+        height: 23px;
+        background: url(../images/close-button.png) no-repeat center;
+        position: absolute;
+        background-size: contain;
+        top: 25px;
+        right: 25px;
+        cursor: pointer;
+    }
+
+    &_empty {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        align-items: center;
+        flex-direction: column;
+
+        &_content{
+            font-size: 25.71px;
+            font-family: "gilroy-light";
+            text-align: center;
+            width: 250px;
+            margin-top: 24px;
+        }
+    }
+
+    &-inner{
+        width: 400px;
+        // padding: 10px;
+        // border: 1px solid #a29415;
+    }
+
+}
+@media all and (max-width: 767px) {
+    .cart-slide{
+        width: 250px;
+        &_empty{
+            &_content{
+                font-size: 19.25px;
+            }
+        }
+    }
+}
+// Cart Slide Ends
+
+// Search Wrapper Starts
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-results-button, input[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+}
+.background-overlay.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,.4);
+    z-index: 10;
+}
+.search{
+    &-wrapper {
+        position: absolute;
+        float: right;
+        overflow: hidden;
+        display: none;
+        background: #f7f7f7;
+        height: 100vh;
+        width: 40vw;
+        right: 0;
+        z-index: 11;
+        padding-right: 5%;
+    }
+    &-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        & input{
+            border: 0px;
+        }
+
+        & form{
+            position: relative;
+        }
+    }
+    &-slide-cross {
+        width: 18px;
+        height: 23px;
+        background: url(../images/close-button.png) no-repeat center;
+        background-size: contain;
+        top: 25px;
+        right: 25px;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1200px){
+    .search{
+        &-container{
+            & .searchIcon {
+                position: absolute !important;
+            }
+        }
+    }
+    .searchIcon.active {
+        z-index: 1;
+    }
+
+}
+
+@media all and (max-width: 1023px) {
+    .cartIcon {
+        margin-right: 20px;
+    }
+}  
+@media all and (max-width: 767px) {
+    .search{
+        &-wrapper{
+            width: 100vw;
+            padding-left: 5%;
+        }
+        &-container {
+            justify-content: center;
+
+            & form{
+                margin-right: 30px;
+            }
+
+            & form{
+                & .searchBar {
+                    width: 270px !important;
+                }
+            }
+        }
+    }
+}
+@media all and (min-width: 768px) and (max-width:1023px) {
+    .search{
+        &-wrapper{
+            width: 100vw;
+        }
+        &-container {
+            justify-content: center;
+
+            & form{
+                margin-right: 50px;
+
+                & input{
+                    width: 250px !important;
+                }
+            }
+        }
+    }
+}
+@media all and (min-width: 1201px) {
+    .search-wrapper .search-container form input{display: none;}
+    .search-wrapper .search-container form .searchIcon{display: none;}
+}
+// Search Wrapper Ends

@@ -41,14 +41,30 @@
 
       </div>
     </div>
+    <div class="background-overlay"></div>
     <!-- Cart Ends -->
 
+    <!-- Search Wrapper Starts -->
+    <div class="search-wrapper">
+      <div class="search-container">
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2 searchBar" type="search" placeholder="Try “Immune”...."
+            aria-label="Search">
+          <span id="searchIcon" class="searchIcon"><img src="images/search-icon.png" /></span>
+        </form>
+        <span class="search-slide-cross"></span>
+      </div>
+    </div>
+    <!-- Search Wrapper Ends -->
+
+    <!-- Top Belt Wrapper Starts -->
     <section class="topBelt">
       <div class="topBeltInnerWrapper">
         FREE DELIVERY ON ALL UK ORDERS OVER £20 | EARN REWARDS |
         <a href="#">REFER A FRIEND</a>
       </div>
     </section>
+    <!-- Top Belt Wrapper Starts -->
 
     <!-- Header Starts -->
     @@include('../template/header.html')
@@ -61,7 +77,7 @@
           <div class="bSliderMainContainer">
             <a href="https://google.com">
               <div class="bSliderImageWrapper" style="
-                    background: url(images/banner-image/banner-image-1.png) no-repeat center center;
+                    background: url(images/banner-image/banner-image-1.PNG) no-repeat center center;
                   "></div>
             </a>
             <!-- <div class="bSliderContentWrapper">
@@ -74,7 +90,7 @@
           <div class="bSliderMainContainer">
             <a href="https://google.com" target="_blank">
               <div class="bSliderImageWrapper" style="
-                    background: url(images/banner-image/banner-image-1.png) no-repeat center center;
+                    background: url(images/banner-image/banner-image-1.PNG) no-repeat center center;
                   "></div>
             </a>
             <!-- <div class="bSliderContentWrapper">
@@ -86,7 +102,7 @@
         <div class="bSliderInnerContainer">
           <div class="bSliderMainContainer">
             <div class="bSliderImageWrapper" style="
-                  background: url(images/banner-image/banner-image-1.png) no-repeat center center;
+                  background: url(images/banner-image/banner-image-1.PNG) no-repeat center center;
                 "></div>
             <!-- <div class="bSliderContentWrapper">
                 <h1 class="banner-img-text">Slide 3</h1>
@@ -98,7 +114,7 @@
     <!-- Banner Slider Ends -->
 
     <!-- Trustpilot Belt Starts -->
-    <section class="trustpilotBelt">
+    <section class="trustpilotBelt  reveal">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -115,7 +131,7 @@
     <!-- Trustpilot Belt Ends -->
 
     <!-- New Arrivals Slider Starts -->
-    <section class="newArrivalWrapper">
+    <section class="newArrivalWrapper  reveal">
       <div id="newArrivalSlider" class="newArrivalSlider">
         <div class="newArrivalsSliderContainer">
           <div class="container">
@@ -231,7 +247,8 @@
     <!-- New Arrivals Slider Ends -->
 
     <!-- Best Seller Slider Starts -->
-    <section class="bestSeller greenBackground" id="best-seller-leaf" data-pointer-events="true" data-hover-only="true">
+    <section class="bestSeller greenBackground  reveal" id="best-seller-leaf" data-pointer-events="true"
+      data-hover-only="true">
       <div class="container bestSellerContainer">
         <div class="row">
           <div class="col-md-12">
@@ -368,7 +385,7 @@
     <!-- Best Seller Slider Ends -->
 
     <!-- Shop By Range Starts -->
-    <section class="rangeSlider">
+    <section class="rangeSlider reveal">
       <div class="rangeSliderContainer">
         <div class="container">
           <div class="row">
@@ -437,7 +454,7 @@
     <!-- Shop By Range Ends -->
 
     <!-- Best Seller Mobile Slider Starts -->
-    <section class="best-seller-mobile">
+    <section class="best-seller-mobile reveal">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -526,7 +543,7 @@
     <!-- Best Seller Mobile Slider Starts -->
 
     <!-- Customer Review Starts -->
-    <section class="customerReview">
+    <section class="customerReview reveal">
       <div class="container ">
         <div class="row">
           <div class="col-md-6 customerReviewLeftSection">
@@ -638,7 +655,7 @@
     <!-- Customer Review Ends -->
 
     <!-- Supplements You Can Trust Starts -->
-    <section class="suppYouCanTrust">
+    <section class="suppYouCanTrust reveal">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -727,7 +744,7 @@
     <!-- Supplements You Can Trust Ends -->
 
     <!-- Customer Image Slider Starts -->
-    <section class="customerImage">
+    <section class="customerImage reveal">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -799,7 +816,7 @@
     <!-- Customer Image Slider Ends -->
 
     <!-- Latest Artical Starts -->
-    <section class="latestArtical">
+    <section class="latestArtical reveal">
       <div class="latestArticalSliderContainer">
         <div class="container">
           <div class="row">
@@ -884,6 +901,8 @@
 
   <!-- Custom JS -->
   <script src="js/custom.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/footer.js"></script>
 </body>
 
 </html>
