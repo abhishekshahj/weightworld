@@ -17,10 +17,10 @@
 
   <!--build:css css/app.min.css -->
   <!-- endbuild -->
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" /> -->
 
-  <link rel="stylesheet" type="text/css" href="css/main.css" />
-  <link rel="stylesheet" type="text/css" href="css/homePage.css" />
+  <link rel="stylesheet" type="text/css" href="css/main.css?v2.6" />
+  <link rel="stylesheet" type="text/css" href="css/homePage.css?v2.6" />
 </head>
 
 <body>
@@ -67,113 +67,120 @@
     <!-- Top Belt Wrapper Starts -->
 
     <!-- Header Starts -->
+    <header class="topHeader" id="navi">
     <div id="searchbox" class="search-box hide">
-    <input id="search-input" type="text" placeholder="Search..." />
-    <div class="search-close"></div>
-</div>
-<nav class="navbar navbar-full navbar-expand-lg navbar-light topHeader" id="navi">
-    <div class="navbar-mobi-header">
-        <span id="searchIcon" class="searchIcon"><img src="images/search-icon.png" /></span>
-        <span class="cartIcon"><img src="images/cart-icon.png" alt="Cart Icon" /></span>
-        <a href="tel:02033227970" title="Mon - Fri 8am to 6pm"><span class="phoneCallIcon"><img
-                    src="images/phone-call-icon.png" alt="Phone Call Icon" /></span></a>
+        <input id="search-input" type="text" placeholder="Search..." />
+        <div class="search-close"></div>
     </div>
-    <a class="navbar-brand" href="/"><img src="images/weightworld-logo.png" /></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+    <nav class="navbar navbar-full navbar-expand-lg navbar-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- <span class="navbar-toggler-icon"></span> -->
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <!-- <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li> -->
-
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle nav-item-link" href="#" id="navbarDropdown" role="button"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    SUPERFOODS <div class="plusSign"></div>
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle nav-item-link" href="#" id="navbarDropdown" role="button"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    WELLBEING <div class="plusSign"></div>
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle nav-item-link" href="#" id="navbarDropdown" role="button"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    WEIGHT LOSS <div class="plusSign"></div>
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle nav-item-link" href="#" id="navbarDropdown" role="button"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    FITNESS <div class="plusSign"></div>
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </li>
-            <!-- <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle nav-item-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    DIETARY NEEDS <div class="plusSign"></div>
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </li> -->
-            <li class="nav-item">
-                <a class="nav-link nav-item-link" href="#">ARTICLES</a>
-            </li>
-            <!-- <li class="nav-item">
-                <a class="nav-link" href="#">NEW</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">OFFERS</a>
-            </li> -->
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2 searchBar" type="search" placeholder="Try “Immune”...."
-                aria-label="Search">
+        <div class="navbar-mobi-header">
             <span id="searchIcon" class="searchIcon"><img src="images/search-icon.png" /></span>
-        </form>
-        <span class="cartIcon"><img src="images/cart-icon.png" alt="Cart Icon" /></span>
-        <span class="loginIcon"><img src="images/login-icon.png" alt="Login Icon" /></span>
-        <span class="phoneCallIcon"><img src="images/phone-call-icon.png" alt="Phone Call Icon" /></span>
-        <span class="phoneNumber">
-            <small class="phoneNumberText"><a href="tel:02033227970">0203 322 7970</a></small>
-            <small class="dailyTimings">Mon - Fri 8am to 6pm</small>
-        </span>
-    </div>
-</nav>
+            <span class="cartIcon"><img src="images/cart-icon.png" alt="Cart Icon" /></span>
+            <a href="tel:02033227970" title="Mon - Fri 8am to 6pm"><span class="phoneCallIcon"><img
+                        src="images/phone-call-icon.png" alt="Phone Call Icon" /></span></a>
+        </div>
+        <a class="navbar-brand" href="/"><img src="images/weightworld-logo.jpg" /></a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <!-- <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li> -->
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle nav-item-link" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        SUPERFOODS <div class="plusSign"></div>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle nav-item-link" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        WELLBEING <div class="plusSign"></div>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle nav-item-link" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        WEIGHT LOSS <div class="plusSign"></div>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle nav-item-link" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        FITNESS <div class="plusSign"></div>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <!-- <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle nav-item-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        DIETARY NEEDS <div class="plusSign"></div>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link nav-item-link" href="#">ARTICLES</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="#">NEW</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">OFFERS</a>
+                </li> -->
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2 searchBar" type="search" placeholder="Try “Immune”...."
+                    aria-label="Search">
+                <span id="searchIcon" class="searchIcon"><img src="images/search-icon.png" /></span>
+            </form>
+            <span class="cartIcon"><img src="images/cart-icon.png" alt="Cart Icon" /></span>
+            <span class="loginIcon"><img src="images/login-icon.png" alt="Login Icon" /></span>
+            <a href="tel:02033227970" title="Mon - Fri 8am to 6pm"><span class="phoneCallIcon"><img
+                        src="images/phone-call-icon.png" alt="Phone Call Icon" /></span></a>
+            <span class="phoneNumber">
+                <small class="phoneNumberText"><a href="tel:02033227970">0203 322 7970</a></small>
+                <small class="dailyTimings">Mon - Fri 8am to 6pm</small>
+            </span>
+        </div>
+    </nav>
+</header>
     <!-- Header Ends -->
 
     <!-- Banner Slider Starts -->
@@ -1272,9 +1279,9 @@
   <script src="js/parallax.min.js"></script>
 
   <!-- Custom JS -->
-  <script src="js/custom.js"></script>
-  <script src="js/header.js"></script>
-  <script src="js/footer.js"></script>
+  <script src="js/custom.js?v2.6"></script>
+  <script src="js/header.js?v2.6"></script>
+  <script src="js/footer.js?v2.6"></script>
 </body>
 
 </html>

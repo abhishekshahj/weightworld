@@ -138,7 +138,7 @@ $(document).ready(function () {
 
   // Banner Slider Full Height Starts
   var topBelt = $(".topBelt").outerHeight();
-  var topHeader = $("nav.navbar").outerHeight();
+  var topHeader = $(".topHeader").outerHeight();
   var totalHeight = topBelt + topHeader;
 
   $(".bSlider .bSliderImageWrapper").css(
@@ -148,7 +148,7 @@ $(document).ready(function () {
 
   $(window).resize(function () {
     var topBelt = $(".topBelt").outerHeight();
-    var topHeader = $("nav.navbar").outerHeight();
+    var topHeader = $(".topHeader").outerHeight();
     var totalHeight = topBelt + topHeader;
     $(".bSlider .bSliderImageWrapper").css(
       "min-height",
@@ -308,12 +308,12 @@ $(document).ready(function () {
   // Customer Review Height Ends
 
   // Supplements You Can Trust Starts
-  if ($(window).width() < 1023) {
+  if ($(window).width() < 1024) {
     var marginDivideTwo = reviewLeftSection / 2;
     $(".suppYouCanTrust").css("margin-top", marginDivideTwo + "px");
   }
   $(window).resize(function () {
-    if ($(window).width() < 1023) {
+    if ($(window).width() < 1024) {
       var marginDivideTwo = reviewLeftSection / 2;
       $(".suppYouCanTrust").css("margin-top", marginDivideTwo + "px");
     }

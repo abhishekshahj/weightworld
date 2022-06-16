@@ -10349,6 +10349,11 @@ h3 {
 }
 
 /*-- Common scss --*/
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .display-none {
+    display: none;
+  }
+}
 .nav-item-link.dropdown-toggle {
   color: #000 !important;
   font-family: "gilroy-semibold";
@@ -10358,9 +10363,6 @@ h3 {
   font-family: "gilroy-semibold";
   font-size: 13.93px;
   color: #545454 !important;
-}
-.navbar-mobi-header {
-  display: none;
 }
 .navbar ul li.show .plusSign::before {
   transform: rotate(90deg);
@@ -10467,7 +10469,21 @@ h3 {
     width: 130px;
   }
 }
+@media all and (min-width: 1024px) {
+  .navbar-mobi-header {
+    display: none;
+  }
+}
 @media all and (max-width: 1023px) {
+  .navbar-collapse form, .navbar-collapse .cartIcon, .navbar-collapse .loginIcon, .navbar-collapse .phoneCallIcon, .navbar-collapse .phoneNumber {
+    display: none;
+  }
+
+  .navbar {
+    justify-content: left;
+    padding: 0.5rem 1rem 0.5rem 0rem;
+  }
+
   .searchBar {
     width: 100% !important;
   }
@@ -10483,12 +10499,6 @@ h3 {
     border-color: transparent;
   }
 
-  .navbar-mobi-header {
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 28px;
-  }
   .navbar-mobi-header .searchIcon {
     position: initial;
     right: auto;
@@ -10538,11 +10548,6 @@ h3 {
 
   .topHeader {
     padding: 35px 24px 35px 20px;
-  }
-}
-@media all and (min-width: 1024px) and (max-width: 1200px) {
-  .phoneCallIcon {
-    display: none;
   }
 }
 #searchbox {
@@ -10655,8 +10660,8 @@ h3 {
   background: #fff;
   display: none;
   height: 100vh;
-  z-index: 11;
-  position: absolute;
+  z-index: 12;
+  position: fixed;
   right: 0;
 }
 .cart-slide-cross {
@@ -10687,14 +10692,6 @@ h3 {
   width: 400px;
 }
 
-@media all and (max-width: 767px) {
-  .cart-slide {
-    width: 250px;
-  }
-  .cart-slide_empty_content {
-    font-size: 19.25px;
-  }
-}
 input[type=search]::-webkit-search-decoration, input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-results-button, input[type=search]::-webkit-search-results-decoration {
   -webkit-appearance: none;
 }
@@ -10706,17 +10703,17 @@ input[type=search]::-webkit-search-decoration, input[type=search]::-webkit-searc
   width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.4);
-  z-index: 10;
+  z-index: 11;
 }
 
 .search-wrapper {
-  position: absolute;
+  position: fixed;
   float: right;
   overflow: hidden;
   display: none;
   background: #f7f7f7;
   height: 100vh;
-  width: 40vw;
+  width: 50vw;
   right: 0;
   z-index: 11;
   padding-right: 5%;
@@ -10727,6 +10724,7 @@ input[type=search]::-webkit-search-decoration, input[type=search]::-webkit-searc
   align-items: center;
 }
 .search-container input {
+  width: 338px !important;
   border: 0px;
 }
 .search-container form {
@@ -10742,6 +10740,11 @@ input[type=search]::-webkit-search-decoration, input[type=search]::-webkit-searc
   cursor: pointer;
 }
 
+@media (min-width: 320px) and (max-width: 360px) {
+  .phoneCallIcon {
+    display: none;
+  }
+}
 @media (min-width: 1024px) and (max-width: 1200px) {
   .search-container .searchIcon {
     position: absolute !important;
@@ -10755,8 +10758,73 @@ input[type=search]::-webkit-search-decoration, input[type=search]::-webkit-searc
   .cartIcon {
     margin-right: 20px;
   }
+
+  .navbar-toggler {
+    padding: 0.75rem 1.75rem 0.25rem 0.75rem;
+  }
+
+  .navbar-collapse {
+    position: fixed;
+    top: 146px;
+    left: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    width: 55%;
+    height: 100%;
+    background: #fff;
+  }
+
+  .navbar-collapse.collapsing {
+    left: -75%;
+    transition: height 0s ease;
+  }
+
+  .navbar-collapse.show {
+    left: 0;
+    transition: left 300ms ease-in-out;
+  }
+
+  .navbar-toggler.collapsed ~ .navbar-collapse {
+    transition: left 500ms ease-in-out;
+  }
+
+  .navbar-toggler span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #585858;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  }
+
+  .navbar-toggler span:first-child {
+    transform-origin: 0% 0%;
+  }
+
+  .navbar-toggler span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
 }
 @media all and (max-width: 767px) {
+  .cart-slide {
+    width: 250px;
+  }
+  .cart-slide_empty_content {
+    font-size: 19.25px;
+  }
+
+  .navbar-mobi-header {
+    display: block;
+    position: absolute;
+    right: -57px;
+    top: 16px;
+  }
+
   .search-wrapper {
     width: 100vw;
     padding-left: 5%;
@@ -10768,7 +10836,7 @@ input[type=search]::-webkit-search-decoration, input[type=search]::-webkit-searc
     margin-right: 30px;
   }
   .search-container form .searchBar {
-    width: 270px !important;
+    width: 75vw !important;
   }
 }
 @media all and (min-width: 768px) and (max-width: 1023px) {
@@ -10782,18 +10850,47 @@ input[type=search]::-webkit-search-decoration, input[type=search]::-webkit-searc
     margin-right: 50px;
   }
   .search-container form input {
-    width: 250px !important;
-  }
-}
-@media all and (min-width: 1201px) {
-  .search-wrapper .search-container form input {
-    display: none;
+    width: 75vw !important;
   }
 
-  .search-wrapper .search-container form .searchIcon {
+  .navbar-mobi-header {
+    position: absolute;
+    right: -57px;
+    top: 22px;
+  }
+}
+@media all and (min-width: 1440px) and (max-width: 1660px) {
+  .searchBar {
+    width: 352px !important;
+  }
+  .searchBar.active {
+    width: 243px !important;
+  }
+}
+@media all and (min-width: 1200px) and (max-width: 1440px) {
+  .search-wrapper {
+    padding-right: 0%;
+  }
+}
+@media all and (min-width: 1024px) and (max-width: 1440px) {
+  .phoneNumber {
     display: none;
   }
 }
+.topHeader {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  -webkit-transition: 0.25s ease-out;
+  -moz-transition: 0.25s ease-out;
+  -o-transition: 0.25s ease-out;
+  transition: 0.25s ease-out;
+  z-index: 10;
+}
+
 .subscribe-wrap {
   background: #f8f8f8;
   padding: 100px 0;
