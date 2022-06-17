@@ -10312,11 +10312,6 @@ strong.light {
   color: #fff;
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  .display-none {
-    display: none;
-  }
-}
 .nav-item-link.dropdown-toggle {
   color: #000 !important;
   font-family: "gilroy-semibold";
@@ -10431,9 +10426,16 @@ strong.light {
   .navbar-brand img {
     width: 130px;
   }
+  .navbar-toggler {
+    padding: 0.75rem 0.75rem 0.25rem 0.35rem !important;
+  }
 }
 @media all and (min-width: 1024px) {
   .navbar-mobi-header {
+    display: none;
+  }
+
+  button.burger {
     display: none;
   }
 }
@@ -10446,6 +10448,14 @@ strong.light {
     justify-content: left;
     padding: 0.5rem 1rem 0.5rem 0rem;
   }
+  .navbar-light .navbar-toggler {
+    color: #000;
+    border-color: transparent;
+  }
+  .navbar-mobi-header .searchIcon {
+    position: initial;
+    right: auto;
+  }
 
   .searchBar {
     width: 100% !important;
@@ -10455,16 +10465,6 @@ strong.light {
     padding: 15px 80px 15px 10px;
     flex-direction: row-reverse;
     justify-content: flex-end;
-  }
-
-  .navbar-light .navbar-toggler {
-    color: #000;
-    border-color: transparent;
-  }
-
-  .navbar-mobi-header .searchIcon {
-    position: initial;
-    right: auto;
   }
 }
 .search-close {
@@ -10667,6 +10667,7 @@ input[type=search]::-webkit-search-decoration, input[type=search]::-webkit-searc
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 11;
+  cursor: pointer;
 }
 
 .search-wrapper {
@@ -10722,40 +10723,24 @@ input[type=search]::-webkit-search-decoration, input[type=search]::-webkit-searc
     margin-right: 20px;
   }
 
+  .higher-z-index {
+    z-index: 99 !important;
+  }
+
+  .position-rel {
+    position: relative;
+  }
+
   .navbar-toggler {
     padding: 0.75rem 1.75rem 0.25rem 0.75rem;
   }
-
-  .navbar-collapse {
-    position: fixed;
-    top: 146px;
-    left: 0;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 15px;
-    width: 55%;
-    height: 100%;
-    background: #fff;
-  }
-
-  .navbar-collapse.collapsing {
-    left: -75%;
-    transition: height 0s ease;
-  }
-
-  .navbar-collapse.show {
-    left: 0;
-    transition: left 300ms ease-in-out;
-  }
-
   .navbar-toggler.collapsed ~ .navbar-collapse {
     transition: left 500ms ease-in-out;
   }
-
   .navbar-toggler span {
     display: block;
     width: 28px;
-    height: 3px;
+    height: 2px;
     margin-bottom: 5px;
     position: relative;
     background: #585858;
@@ -10764,13 +10749,40 @@ input[type=search]::-webkit-search-decoration, input[type=search]::-webkit-searc
     transform-origin: 4px 0px;
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
   }
-
   .navbar-toggler span:first-child {
     transform-origin: 0% 0%;
   }
-
   .navbar-toggler span:nth-last-child(2) {
     transform-origin: 0% 100%;
+  }
+  .navbar-toggler.active span:first-child {
+    transform: rotate(39deg);
+    bottom: 1px;
+  }
+  .navbar-toggler.active span:nth-child(2) {
+    visibility: hidden;
+  }
+  .navbar-toggler.active span:last-child {
+    transform: rotate(-40deg);
+    margin-left: -2px;
+  }
+  .navbar-collapse {
+    position: fixed;
+    left: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    width: 55%;
+    height: 100%;
+    background: #fff;
+  }
+  .navbar-collapse.collapsing {
+    left: -75%;
+    transition: height 0s ease;
+  }
+  .navbar-collapse.show {
+    left: 0;
+    transition: left 300ms ease-in-out;
   }
 }
 @media all and (max-width: 767px) {
@@ -10785,7 +10797,7 @@ input[type=search]::-webkit-search-decoration, input[type=search]::-webkit-searc
     display: block;
     position: absolute;
     right: -57px;
-    top: 16px;
+    top: 26px;
   }
 
   .search-wrapper {
@@ -10853,7 +10865,137 @@ input[type=search]::-webkit-search-decoration, input[type=search]::-webkit-searc
   transition: 0.25s ease-out;
   z-index: 10;
 }
+.topHeader.nav-down {
+  box-shadow: 0px 4px 42px grey;
+}
 
+/****************
+* Burger Styles *
+*****************/
+.burger {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+.burger__bar {
+  height: 2px;
+  border-radius: 2px;
+  width: 28px;
+  background-color: black;
+  display: block;
+  position: absolute;
+  left: 50%;
+  animation-timing-function: ease-in-out;
+  animation-play-state: paused;
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+}
+.burger__bar:nth-child(1) {
+  top: 38%;
+  transform: translate(-50%, 0%);
+}
+.burger__bar:nth-child(2) {
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.burger__bar:nth-child(3) {
+  bottom: 38%;
+  transform: translate(-50%, 0%);
+}
+.burger.close .burger__bar {
+  animation-direction: reverse;
+}
+.burger.open .burger__bar {
+  animation-direction: normal;
+}
+.burger.animate .burger__bar {
+  animation-play-state: running;
+}
+.burger.animate .burger__bar:nth-child(1) {
+  animation-name: default-top;
+}
+.burger.animate .burger__bar:nth-child(2) {
+  animation-name: default-middle;
+}
+.burger.animate .burger__bar:nth-child(3) {
+  animation-name: default-bottom;
+}
+.burger--merge.animate .burger__bar {
+  animation-duration: 0.6s;
+  animation-timing-function: ease;
+}
+.burger--merge.animate .burger__bar:nth-child(1) {
+  animation-name: merge-top;
+}
+.burger--merge.animate .burger__bar:nth-child(2) {
+  animation-name: merge-middle;
+}
+.burger--merge.animate .burger__bar:nth-child(3) {
+  animation-name: merge-bottom;
+}
+.burger--rotate.animate .burger__bar:nth-child(1) {
+  animation-name: rotate-top;
+}
+.burger--rotate.animate .burger__bar:nth-child(2) {
+  animation-name: rotate-middle;
+}
+.burger--rotate.animate .burger__bar:nth-child(3) {
+  animation-name: rotate-bottom;
+}
+.burger--spin.animate .burger__bar {
+  animation-duration: 1s;
+  animation-timing-function: ease;
+}
+.burger--spin.animate .burger__bar:nth-child(1) {
+  animation-name: spin-top;
+}
+.burger--spin.animate .burger__bar:nth-child(2) {
+  animation-name: spin-middle;
+}
+.burger--spin.animate .burger__bar:nth-child(3) {
+  animation-name: spin-bottom;
+}
+
+/*__________________
+       SPIN
+____________________*/
+@keyframes spin-top {
+  50% {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  75% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+  100% {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(315deg);
+  }
+}
+@keyframes spin-middle {
+  50% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+@keyframes spin-bottom {
+  50% {
+    bottom: 50%;
+    transform: translate(-50%, 50%) rotate(0deg);
+  }
+  75% {
+    transform: translate(-50%, 50%) rotate(450deg);
+  }
+  100% {
+    bottom: 50%;
+    transform: translate(-50%, 50%) rotate(405deg);
+  }
+}
 .subscribe-wrap {
   background: #f8f8f8;
   padding: 100px 0;
