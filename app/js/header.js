@@ -45,9 +45,10 @@ $(document).ready(function () {
       $(".background-overlay").removeClass("active");
       $(".navbar-collapse").removeClass("show");
       $(".burger").removeClass("active");
-      $(".topBelt").removeClass("position-rel");
-      $(".topBelt").removeClass("higher-z-index");
+      $(".topBelt").removeClass("position-rel higher-z-index");
       $(".topHeader").removeClass("higher-z-index");
+      $(".burger").removeClass("open").addClass("close");
+
     }
   });
   // Click in Background Overlay to close slide ends
@@ -146,7 +147,7 @@ $(document).ready(function () {
         if (st > lastScrollTop && st > navbarHeight) {
           // Scroll down
           var headerOuterHeight = $(".topHeader").outerHeight();
-          $(".topHeader").removeClass("nav-down").addClass("nav-up");
+          $(".topHeader").removeClass("nav-down").addClass("nav-up headerShadow");
           $(".topHeader.nav-up").css("top", "-" + headerOuterHeight + "px");
         } else {
           // Scroll up
@@ -188,6 +189,7 @@ $(document).ready(function () {
           });
 
           $(".topHeader").removeClass("nav-down");
+          $(".topHeader").removeClass("headerShadow");
         }
       };
       // Detect page is fully scrolled up ends

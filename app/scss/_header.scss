@@ -606,7 +606,7 @@ input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-s
     transition: 0.25s ease-out;
     z-index: 10;
 
-    &.nav-down {
+    &.headerShadow {
         box-shadow: 0px 4px 42px grey;
     }
   }
