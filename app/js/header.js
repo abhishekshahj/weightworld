@@ -67,10 +67,8 @@ $(document).ready(function () {
     $("body").toggleClass("overflow-hidden");
     $(".background-overlay").toggleClass("active");
     $(".topHeader").toggleClass("higher-z-index");
-    $(".topBelt").toggleClass("position-rel");
-    $(".topBelt").toggleClass("higher-z-index");
+    $(".topBelt").toggleClass("position-rel higher-z-index");
   });
-
   $(".navbar-collapse").css("top", headerTotalHeight + "px");
 
   $(window).resize(function () {
@@ -181,14 +179,13 @@ $(document).ready(function () {
         if (D.scrollTop == 0) {
           var headerTotalHeight =
             $(".topBelt").outerHeight() + $(".topHeader").outerHeight();
+
           $(".navbar-collapse").css("top", headerTotalHeight + "px");
           $(window).resize(function () {
             var headerTotalHeight =
               $(".topBelt").outerHeight() + $(".topHeader").outerHeight();
             $(".navbar-collapse").css("top", headerTotalHeight + "px");
           });
-
-          $(".topHeader").removeClass("nav-down");
           $(".topHeader").removeClass("headerShadow");
         }
       };
@@ -198,11 +195,6 @@ $(document).ready(function () {
     // Call the created function
     pageScroll();
   })(jQuery);
-
-  // $(window).resize(function () {
-  //   var headerOuterHeight = $(".navbar").outerHeight();
-  //   $(".topHeader.nav-up").css("top", "-" + headerOuterHeight + "px");
-  // });
 
   // Show/Hide Navigation Ends
 
