@@ -20,10 +20,27 @@ strong {
     position: relative;
     font-size: 19.66px;
     padding: 15px 55px 15px 35px;
+    transition: all 0.5s ease;
 
   &:hover{
     background-color: #236152;
     border-color: #236152;
     color: #fff;
+  }
+}
+
+.btn{
+  &.btn-white{
+    position: relative;
+    font-family: "gilroy-semibold";
+    padding: 0.5rem 48px 0.5rem 34px;
+    background-color: #fff;
+    border-color: #fff;
+    color: #000;
+    transition: all 0.5s ease;
+    &:hover{
+      background-color: #d7d7d7;
+      border-color: #d7d7d7;
+    }
   }
 }

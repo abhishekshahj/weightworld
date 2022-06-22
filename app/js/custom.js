@@ -129,7 +129,7 @@ $(document).ready(function () {
     variableWidth: true,
     infinite: true,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     arrows: false,
     focusOnSelect: true,
     dots: true,
@@ -141,19 +141,34 @@ $(document).ready(function () {
   var topHeader = $(".topHeader").outerHeight();
   var totalHeight = topBelt + topHeader;
 
-  $(".bSlider .bSliderImageWrapper").css(
-    "min-height",
-    "calc(100vh - " + totalHeight + "px)"
-  );
+  if ($(window).width() > 767 && $(window).width() < 1024) {
+    $(".bSlider .bSliderImageWrapper").css(
+      "min-height",
+      "calc(47vh - " + totalHeight + "px)"
+    );
+  } else {
+    $(".bSlider .bSliderImageWrapper").css(
+      "min-height",
+      "calc(100vh - " + totalHeight + "px)"
+    );
+  }
 
   $(window).resize(function () {
     var topBelt = $(".topBelt").outerHeight();
     var topHeader = $(".topHeader").outerHeight();
     var totalHeight = topBelt + topHeader;
-    $(".bSlider .bSliderImageWrapper").css(
-      "min-height",
-      "calc(100vh - " + totalHeight + "px)"
-    );
+
+    if ($(window).width() > 767 && $(window).width() < 1024) {
+      $(".bSlider .bSliderImageWrapper").css(
+        "min-height",
+        "calc(47vh - " + totalHeight + "px)"
+      );
+    } else {
+      $(".bSlider .bSliderImageWrapper").css(
+        "min-height",
+        "calc(100vh - " + totalHeight + "px)"
+      );
+    }
   });
   // Banner Slider Full Height Ends
 

@@ -10305,6 +10305,7 @@ strong.light {
   position: relative;
   font-size: 19.66px;
   padding: 15px 55px 15px 35px;
+  transition: all 0.5s ease;
 }
 .btn-green:hover {
   background-color: #236152;
@@ -10312,22 +10313,42 @@ strong.light {
   color: #fff;
 }
 
+.btn.btn-white {
+  position: relative;
+  font-family: "gilroy-semibold";
+  padding: 0.5rem 48px 0.5rem 34px;
+  background-color: #fff;
+  border-color: #fff;
+  color: #000;
+  transition: all 0.5s ease;
+}
+.btn.btn-white:hover {
+  background-color: #d7d7d7;
+  border-color: #d7d7d7;
+}
+
 .nav-item-link.dropdown-toggle {
   color: #000 !important;
   font-family: "gilroy-semibold";
-  font-size: 13.93px;
+  font-size: 13px;
 }
 .nav-item-link {
   font-family: "gilroy-semibold";
-  font-size: 13.93px;
+  font-size: 13px;
   color: #545454 !important;
+}
+.navbar ul li {
+  margin-right: 10px;
 }
 .navbar ul li.show .plusSign::before {
   transform: rotate(90deg);
 }
+.navbar-brand img {
+  width: 190px;
+}
 
 .topHeader {
-  padding: 35px 24px 35px 60px;
+  padding: 35px 24px 35px 24px;
 }
 
 .dropdown-toggle::after {
@@ -10785,7 +10806,7 @@ input[type=search]::-webkit-search-decoration, input[type=search]::-webkit-searc
 }
 @media all and (max-width: 767px) {
   .cart-slide {
-    width: 250px;
+    width: calc(100vw + 2px);
   }
   .cart-slide_empty_content {
     font-size: 19.25px;
@@ -10863,10 +10884,13 @@ input[type=search]::-webkit-search-decoration, input[type=search]::-webkit-searc
   transition: 0.25s ease-out;
   z-index: 10;
 }
-.topHeader.headerShadow {
-  box-shadow: 0px 4px 42px grey;
-}
 
+@media all and (min-width: 1024px) {
+  .topHeader.headerShadow {
+    box-shadow: 0 3px 3px #c4c4c4;
+    padding: 5px 24px 5px 24px;
+  }
+}
 /****************
 * Burger Styles *
 *****************/

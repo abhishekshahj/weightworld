@@ -242,7 +242,7 @@
             }
         }
         &Slider {
-            padding: 0 15px;
+            padding: 0 0 0 15px;
     
             .newSliderMainInner {
                 min-height: 330px;
@@ -345,7 +345,7 @@
         background: #ffffff;
 
         &Container {
-            padding: 0 15px;
+            padding: 0 0 0 15px;
         }
         & .rangeSliderMainInner {
             min-height: 250px;
@@ -471,6 +471,9 @@
         }
     }
 }
+@media all and (min-width: 1024px) {
+    .suppYouCanTrust {margin-top: 0 !important;}
+}
 @media all and (min-width: 768px) and (max-width:1023px) {
     .suppContentWrapper .suppMainTitle {
         font-size: 50.29px !important;
@@ -567,6 +570,8 @@
         }
         &ContentWrapper {
             margin-bottom: 30px;
+            margin-left: 10px;
+            max-width: 250px;
         }
         &TextWrapper {
             margin-top: 18px;
@@ -575,16 +580,6 @@
         &Title {
             margin-top: 12px;
             font-size: 17.58px;
-        }
-    }
-}
-@media all and (max-width: 767px) {
-    .latestArtical {
-        margin: 0 0 0 15px;
-
-        &ContentWrapper {
-            margin-left: 10px;
-            max-width: 250px;
         }
     }
 }
@@ -975,7 +970,7 @@
         &-mobile{
            display: block; 
            background: #f4f4f4;
-            padding: 25px 10px 40px 10px;
+            padding: 25px 0 40px 15px;
         }
         &-image {
             min-height: 330px;
